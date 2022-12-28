@@ -39,8 +39,10 @@ extension MainViewController{
             return
         }
         let urlReq = URLRequest(url: url)
-        mainWebView.load(urlReq)
-        
+        self.mainWebView.load(urlReq)
+        self.mainWebView.allowsBackForwardNavigationGestures = true
+        self.mainWebView.backgroundColor = UIColor.clear
+        self.mainWebView.isOpaque = false
     }
     
 }
