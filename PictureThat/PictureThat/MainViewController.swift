@@ -34,7 +34,7 @@ extension MainViewController{
     func setInitialUi(){
         
         //mainWebview set
-        let urlString = "https://kingssajonjaltwo.github.io/practice_MVP/JonZalSop/"
+        let urlString = "https://kingssajonjaltwo.github.io/PictureThat-JS/"
         guard let url = URL(string: urlString) else {
             return
         }
