@@ -18,13 +18,12 @@ class MainViewController: UIViewController {
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        // Do any additional setup  after loading the view.
             
         self.setInitialUi()
         
     }
     
-        
     
 }
 
@@ -40,11 +39,10 @@ extension MainViewController{
         }
         let urlReq = URLRequest(url: url)
         self.mainWebView.load(urlReq)
-        self.mainWebView.allowsBackForwardNavigationGestures = true
         self.mainWebView.backgroundColor = UIColor.clear
         self.mainWebView.isOpaque = false
     }
     
-    //Happy New Year 2023-01-01
     
 }
+
