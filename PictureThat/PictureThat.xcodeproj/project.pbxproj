@@ -8,17 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		070B8DAC29D8455200135BEA /* PicturethatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070B8DAB29D8455200135BEA /* PicturethatApp.swift */; };
-		070B8DAE29D8455200135BEA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070B8DAD29D8455200135BEA /* ContentView.swift */; };
 		070B8DB029D8455300135BEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 070B8DAF29D8455300135BEA /* Assets.xcassets */; };
 		070B8DB329D8455300135BEA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 070B8DB229D8455300135BEA /* Preview Assets.xcassets */; };
+		070B8DBC29D8471300135BEA /* PocaRanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070B8DBB29D8471300135BEA /* PocaRanView.swift */; };
+		070B8DBE29D8472A00135BEA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070B8DBD29D8472A00135BEA /* HomeView.swift */; };
+		070B8DC129D8631700135BEA /* Font+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070B8DC029D8631700135BEA /* Font+.swift */; };
+		070B8DD829D86E0400135BEA /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070B8DD729D86E0400135BEA /* Color+.swift */; };
+		070B8DDE29D87B0100135BEA /* NotoSansKR-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 070B8DCE29D86C3800135BEA /* NotoSansKR-Bold.otf */; };
+		070B8DDF29D87B0100135BEA /* NotoSansKR-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 070B8DCF29D86C3800135BEA /* NotoSansKR-Light.otf */; };
+		070B8DE029D87B0100135BEA /* NotoSansKR-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 070B8DD029D86C3800135BEA /* NotoSansKR-Medium.otf */; };
+		070B8DE129D87B0100135BEA /* NotoSansKR-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 070B8DD129D86C3800135BEA /* NotoSansKR-Regular.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		070B8DA829D8455200135BEA /* Picturethat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Picturethat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		070B8DAB29D8455200135BEA /* PicturethatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicturethatApp.swift; sourceTree = "<group>"; };
-		070B8DAD29D8455200135BEA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		070B8DAF29D8455300135BEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		070B8DB229D8455300135BEA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		070B8DBB29D8471300135BEA /* PocaRanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocaRanView.swift; sourceTree = "<group>"; };
+		070B8DBD29D8472A00135BEA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		070B8DC029D8631700135BEA /* Font+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+.swift"; sourceTree = "<group>"; };
+		070B8DCE29D86C3800135BEA /* NotoSansKR-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Bold.otf"; sourceTree = "<group>"; };
+		070B8DCF29D86C3800135BEA /* NotoSansKR-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Light.otf"; sourceTree = "<group>"; };
+		070B8DD029D86C3800135BEA /* NotoSansKR-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Medium.otf"; sourceTree = "<group>"; };
+		070B8DD129D86C3800135BEA /* NotoSansKR-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Regular.otf"; sourceTree = "<group>"; };
+		070B8DD729D86E0400135BEA /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
+		070B8DDB29D87A9D00135BEA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +66,12 @@
 		070B8DAA29D8455200135BEA /* Picturethat */ = {
 			isa = PBXGroup;
 			children = (
+				070B8DDB29D87A9D00135BEA /* Info.plist */,
+				070B8DC929D86A0900135BEA /* Fonts */,
 				070B8DAB29D8455200135BEA /* PicturethatApp.swift */,
-				070B8DAD29D8455200135BEA /* ContentView.swift */,
+				070B8DD629D86C4800135BEA /* Extensions */,
+				070B8DBA29D846FC00135BEA /* PocaRanView */,
+				070B8DB929D846A900135BEA /* HomeView */,
 				070B8DAF29D8455300135BEA /* Assets.xcassets */,
 				070B8DB129D8455300135BEA /* Preview Content */,
 			);
@@ -65,6 +84,42 @@
 				070B8DB229D8455300135BEA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		070B8DB929D846A900135BEA /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				070B8DBD29D8472A00135BEA /* HomeView.swift */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		070B8DBA29D846FC00135BEA /* PocaRanView */ = {
+			isa = PBXGroup;
+			children = (
+				070B8DBB29D8471300135BEA /* PocaRanView.swift */,
+			);
+			path = PocaRanView;
+			sourceTree = "<group>";
+		};
+		070B8DC929D86A0900135BEA /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				070B8DCE29D86C3800135BEA /* NotoSansKR-Bold.otf */,
+				070B8DCF29D86C3800135BEA /* NotoSansKR-Light.otf */,
+				070B8DD029D86C3800135BEA /* NotoSansKR-Medium.otf */,
+				070B8DD129D86C3800135BEA /* NotoSansKR-Regular.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		070B8DD629D86C4800135BEA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				070B8DC029D8631700135BEA /* Font+.swift */,
+				070B8DD729D86E0400135BEA /* Color+.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +180,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				070B8DDE29D87B0100135BEA /* NotoSansKR-Bold.otf in Resources */,
+				070B8DDF29D87B0100135BEA /* NotoSansKR-Light.otf in Resources */,
+				070B8DE029D87B0100135BEA /* NotoSansKR-Medium.otf in Resources */,
+				070B8DE129D87B0100135BEA /* NotoSansKR-Regular.otf in Resources */,
 				070B8DB329D8455300135BEA /* Preview Assets.xcassets in Resources */,
 				070B8DB029D8455300135BEA /* Assets.xcassets in Resources */,
 			);
@@ -137,8 +196,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				070B8DAE29D8455200135BEA /* ContentView.swift in Sources */,
+				070B8DC129D8631700135BEA /* Font+.swift in Sources */,
+				070B8DD829D86E0400135BEA /* Color+.swift in Sources */,
+				070B8DBE29D8472A00135BEA /* HomeView.swift in Sources */,
 				070B8DAC29D8455200135BEA /* PicturethatApp.swift in Sources */,
+				070B8DBC29D8471300135BEA /* PocaRanView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +332,7 @@
 				DEVELOPMENT_TEAM = PX9ZAGMV5G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Picturethat/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,6 +362,7 @@
 				DEVELOPMENT_TEAM = PX9ZAGMV5G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Picturethat/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
