@@ -75,7 +75,7 @@ struct HomeView: View {
                     
                     
                     Button {
-                        print(" 8 ")
+                        print("시작")
                     } label: {
                         Text("8")
                             .font(.noto(.bold, size: 16))
@@ -87,7 +87,7 @@ struct HomeView: View {
                     }
                     
                     Button {
-                        print(" 시작 ")
+                        print("8")
                     } label: {
                         Text("시작")
                             .font(.noto(.bold, size: 16))
