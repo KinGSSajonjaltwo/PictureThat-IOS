@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct HomeView: View {
+    
+    @State private var cardCount = 4
+    
     var body: some View {
         GeometryReader { geo in
             ZStack{
@@ -74,20 +77,44 @@ struct HomeView: View {
                     Spacer()
                     
                     
-                    Button {
-                        print("시작")
-                    } label: {
-                        Text("8")
+                    HStack{
+                        
+                        Button{
+                            cardCount -= 1
+                        }label:{
+                            
+                            Image(systemName: "minus.circle.fill")
+                                .padding(.leading, 15)
+                                .foregroundColor(cardCount == 4 ? .btnDisableColor : .btnEnableColor)
+                            
+                        }.disabled(cardCount == 4)
+                        
+                        Spacer()
+                        
+                        Text("\(cardCount)")
                             .font(.noto(.bold, size: 16))
                             .foregroundColor(Color.black01)
-                            .frame(width: 168, height: 44)
-                            .background(Color.white)
-                            .cornerRadius(24)
                         
-                    }
+                        Spacer()
+                        
+                        Button{
+                            cardCount += 1
+                        }label:{
+                            
+                            Image(systemName: "plus.circle.fill")
+                                .padding(.trailing, 15)
+                                .foregroundColor(cardCount == 10 ? .btnDisableColor : .btnEnableColor)
+                            
+                        }.disabled(cardCount == 10)
+                        
+                    }.foregroundColor(Color.black01)
+                        .frame(width: 168, height: 44)
+                        .background(Color.white)
+                        .cornerRadius(24)
+                    
                     
                     Button {
-                        print("8")
+                        print("시작!")
                     } label: {
                         Text("시작")
                             .font(.noto(.bold, size: 16))
