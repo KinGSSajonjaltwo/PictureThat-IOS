@@ -75,7 +75,7 @@ struct HomeView: View {
                     
                     
                     Button {
-                        print("8")
+                        print(" 8 ")
                     } label: {
                         Text("8")
                             .font(.noto(.bold, size: 16))
