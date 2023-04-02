@@ -97,9 +97,9 @@ struct HomeView: View {
                             .cornerRadius(24)
                         
                     }
-
                     
-                        
+                    
+                    
                 }.padding(.bottom, geo.size.height * (120/844))
                 
                 
