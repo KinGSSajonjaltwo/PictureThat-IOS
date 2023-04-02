@@ -9,128 +9,130 @@ import SwiftUI
 
 struct HomeView: View {
     
-    @State private var cardCount = 4
+    @State private var cardCount: Int = 4
     
     var body: some View {
-        GeometryReader { geo in
-            ZStack{
-                
-                Image("HomewViewBG")
-                    .resizable()
-                    .scaledToFill()
-                    .ignoresSafeArea(.all)
-                    .frame(width: geo.size.width,height: geo.size.height)
-                
-                VStack{
-                    HStack{
-                        Image("CameraBig1")
+        NavigationView {
+            GeometryReader { geo in
+                ZStack{
+                    
+                    Image("HomewViewBG")
+                        .resizable()
+                        .scaledToFill()
+                        .ignoresSafeArea(.all)
+                        .frame(width: geo.size.width,height: geo.size.height)
+                    
+                    VStack{
+                        HStack{
+                            Image("CameraBig1")
+                            Spacer()
+                            Image("CameraBig2")
+                        }
+                        
                         Spacer()
-                        Image("CameraBig2")
+                        
+                        HStack{
+                            Image("CameraBig3")
+                            Spacer()
+                            Image("CameraBig4")
+                        }
                     }
+                    .padding(EdgeInsets(top: geo.size.height * (50 / 844), leading: geo.size.width * (20/390), bottom: geo.size.height * (50 / 844), trailing:  geo.size.width * (20/390)))
                     
-                    Spacer()
-                    
-                    HStack{
-                        Image("CameraBig3")
+                    VStack{
+                        
+                        HStack{
+                            Image("CameraS1")
+                            Spacer()
+                            Image("CameraS2")
+                        }
+                        
                         Spacer()
-                        Image("CameraBig4")
+                        
+                        Image("CameraCenter")
+                        
+                        Spacer()
+                        
+                        HStack{
+                            Image("CameraS3")
+                            Spacer()
+                            Image("CameraS4")
+                        }
+                        
                     }
-                }
-                .padding(EdgeInsets(top: geo.size.height * (50 / 844), leading: geo.size.width * (20/390), bottom: geo.size.height * (50 / 844), trailing:  geo.size.width * (20/390)))
-                
-                VStack{
+                    .padding(EdgeInsets(top: geo.size.height * (353 / 844), leading: geo.size.width * (87/390), bottom: geo.size.height * (353 / 844), trailing:  geo.size.width * (87/390)))
                     
-                    HStack{
-                        Image("CameraS1")
+                    VStack{
+                        
+                        Image("mainLogo")
+                        
                         Spacer()
-                        Image("CameraS2")
+                        
+                        
+                        
                     }
-                    
-                    Spacer()
-                    
-                    Image("CameraCenter")
-                    
-                    Spacer()
-                    
-                    HStack{
-                        Image("CameraS3")
-                        Spacer()
-                        Image("CameraS4")
-                    }
-                    
-                }
-                .padding(EdgeInsets(top: geo.size.height * (353 / 844), leading: geo.size.width * (87/390), bottom: geo.size.height * (353 / 844), trailing:  geo.size.width * (87/390)))
-                
-                VStack{
-                    
-                    Image("MainLogo")
-                    
-                    Spacer()
+                    .padding(.top, geo.size.height * (130 / 844))
                     
                     
-                    
-                }
-                .padding(.top, geo.size.height * (130 / 844))
-                
-                
-                VStack(spacing: geo.size.height * (28/844)){
-                    Spacer()
-                    
-                    
-                    HStack{
-                        
-                        Button{
-                            cardCount -= 1
-                        }label:{
-                            
-                            Image(systemName: "minus.circle.fill")
-                                .padding(.leading, 15)
-                                .foregroundColor(cardCount == 4 ? .btnDisableColor : .btnEnableColor)
-                            
-                        }.disabled(cardCount == 4)
-                        
+                    VStack(spacing: geo.size.height * (28/844)){
                         Spacer()
                         
-                        Text("\(cardCount)")
-                            .font(.noto(.bold, size: 16))
-                            .foregroundColor(Color.black01)
                         
-                        Spacer()
-                        
-                        Button{
-                            cardCount += 1
-                        }label:{
+                        HStack{
                             
-                            Image(systemName: "plus.circle.fill")
-                                .padding(.trailing, 15)
-                                .foregroundColor(cardCount == 10 ? .btnDisableColor : .btnEnableColor)
+                            Button{
+                                cardCount -= 1
+                            }label:{
+                                
+                                Image(systemName: "minus.circle.fill")
+                                    .padding(.leading, 15)
+                                    .foregroundColor(cardCount == 4 ? .btnDisableColor : .btnEnableColor)
+                                
+                            }.disabled(cardCount == 4)
                             
-                        }.disabled(cardCount == 10)
-                        
-                    }.foregroundColor(Color.black01)
-                        .frame(width: 168, height: 44)
-                        .background(Color.white)
-                        .cornerRadius(24)
-                    
-                    
-                    Button {
-                        print("시작!")
-                    } label: {
-                        Text("시작")
-                            .font(.noto(.bold, size: 16))
-                            .foregroundColor(Color.black01)
+                            Spacer()
+                            
+                            Text("\(cardCount)")
+                                .font(.noto(.bold, size: 16))
+                                .foregroundColor(Color.black01)
+                            
+                            Spacer()
+                            
+                            Button{
+                                cardCount += 1
+                            }label:{
+                                
+                                Image(systemName: "plus.circle.fill")
+                                    .padding(.trailing, 15)
+                                    .foregroundColor(cardCount == 10 ? .btnDisableColor : .btnEnableColor)
+                                
+                            }.disabled(cardCount == 10)
+                            
+                        }.foregroundColor(Color.black01)
                             .frame(width: 168, height: 44)
                             .background(Color.white)
                             .cornerRadius(24)
                         
-                    }
+                        
+                        
+                        NavigationLink {
+                            PocaRanView(cardCount: self.$cardCount)
+                        } label: {
+                            Text("시작")
+                                .font(.noto(.bold, size: 16))
+                                .foregroundColor(Color.black01)
+                                .frame(width: 168, height: 44)
+                                .background(Color.white)
+                                .cornerRadius(24)
+                        }
+                        
+                        
+                        
+                    }.padding(.bottom, geo.size.height * (120/844))
                     
                     
                     
-                }.padding(.bottom, geo.size.height * (120/844))
-                
-                
-                
+                }
             }
         }
     }

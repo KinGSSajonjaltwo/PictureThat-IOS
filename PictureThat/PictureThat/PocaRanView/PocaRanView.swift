@@ -8,13 +8,15 @@
 import SwiftUI
 
 struct PocaRanView: View {
+    @Binding var cardCount: Int
+    
     var body: some View {
-        Text("PocaRan")
+        Text("\(cardCount)")
     }
 }
 
 struct PocaRanView_Previews: PreviewProvider {
     static var previews: some View {
-        PocaRanView()
+        PocaRanView(cardCount: .constant(10))
     }
 }
