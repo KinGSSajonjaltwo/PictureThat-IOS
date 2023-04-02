@@ -24,7 +24,7 @@ struct HomeView: View {
                         Spacer()
                         Image("CameraBig2")
                     }
-                
+                    
                     Spacer()
                     
                     HStack{
@@ -61,7 +61,7 @@ struct HomeView: View {
                 VStack{
                     
                     Image("MainLogo")
-                
+                    
                     Spacer()
                     
                     
