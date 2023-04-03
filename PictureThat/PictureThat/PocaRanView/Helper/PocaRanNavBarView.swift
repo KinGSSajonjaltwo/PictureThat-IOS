@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct PocaRanNavBarView: View {
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
         HStack{
             
@@ -39,7 +41,7 @@ struct PocaRanNavBarView_Previews: PreviewProvider {
 extension PocaRanNavBarView{
     private var backbutton: some View{
         Button {
-            print("back")
+            presentationMode.wrappedValue.dismiss()
         } label: {
             Image(systemName: "house")
                 .foregroundColor(Color.black01)
