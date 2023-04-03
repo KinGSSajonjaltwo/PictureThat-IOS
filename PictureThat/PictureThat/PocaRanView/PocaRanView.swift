@@ -11,7 +11,17 @@ struct PocaRanView: View {
     @Binding var cardCount: Int
     
     var body: some View {
-        Text("\(cardCount)")
+        
+        PocaRanNavBarContainerView {
+            ZStack{
+                Image("HomewViewBG")
+                    .resizable()
+                    .ignoresSafeArea()
+            }
+        }
+        .toolbar(.hidden, for: .navigationBar)
+
+    
     }
 }
 
