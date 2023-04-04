@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PocaRanNavBarContainerView<Content: View>: View {
+struct PocaRanToolBarContainerView<Content: View>: View {
     
     let content: Content
     
@@ -27,6 +27,7 @@ struct PocaRanNavBarContainerView<Content: View>: View {
             VStack(spacing: 0){
                 PocaRanNavBarView()
                 content.frame(maxWidth: .infinity, maxHeight: .infinity)
+                PocaRanControlBarView()
             }
             
         }
@@ -35,9 +36,9 @@ struct PocaRanNavBarContainerView<Content: View>: View {
     }
 }
 
-struct PocaRanNavBarContainerView_Previews: PreviewProvider {
+struct PocaRanToolBarContainerView_Previews: PreviewProvider {
     static var previews: some View {
-        PocaRanNavBarContainerView {
+        PocaRanToolBarContainerView {
             VStack{
                 
             }
