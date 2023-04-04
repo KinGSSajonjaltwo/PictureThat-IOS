@@ -13,10 +13,8 @@ struct PocaRanView: View {
     var body: some View {
         
         PocaRanNavBarContainerView {
-            ZStack{
-                Image("HomewViewBG")
-                    .resizable()
-                    .ignoresSafeArea()
+            VStack{
+                
             }
         }
         .toolbar(.hidden, for: .navigationBar)
