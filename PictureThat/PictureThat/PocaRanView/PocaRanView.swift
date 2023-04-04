@@ -11,7 +11,15 @@ struct PocaRanView: View {
     @Binding var cardCount: Int
     
     var body: some View {
-        Text("\(cardCount)")
+        
+        PocaRanToolBarContainerView{
+            VStack{
+                
+            }
+        }
+        .toolbar(.hidden, for: .navigationBar)
+
+    
     }
 }
 

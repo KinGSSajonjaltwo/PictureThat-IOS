@@ -18,6 +18,10 @@
 		070B8DDF29D87B0100135BEA /* NotoSansKR-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 070B8DCF29D86C3800135BEA /* NotoSansKR-Light.otf */; };
 		070B8DE029D87B0100135BEA /* NotoSansKR-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 070B8DD029D86C3800135BEA /* NotoSansKR-Medium.otf */; };
 		070B8DE129D87B0100135BEA /* NotoSansKR-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 070B8DD129D86C3800135BEA /* NotoSansKR-Regular.otf */; };
+		07B091EB29DAFEFF008C8A85 /* UINavigationController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B091EA29DAFEFF008C8A85 /* UINavigationController+.swift */; };
+		07B091ED29DB0650008C8A85 /* PocaRanNavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B091EC29DB0650008C8A85 /* PocaRanNavBarView.swift */; };
+		07B091F029DB08F0008C8A85 /* PocaRanToolBarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B091EF29DB08F0008C8A85 /* PocaRanToolBarContainerView.swift */; };
+		07B091F229DBD8FC008C8A85 /* PocaRanControlBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B091F129DBD8FC008C8A85 /* PocaRanControlBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +38,10 @@
 		070B8DD129D86C3800135BEA /* NotoSansKR-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Regular.otf"; sourceTree = "<group>"; };
 		070B8DD729D86E0400135BEA /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
 		070B8DDB29D87A9D00135BEA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07B091EA29DAFEFF008C8A85 /* UINavigationController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+.swift"; sourceTree = "<group>"; };
+		07B091EC29DB0650008C8A85 /* PocaRanNavBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocaRanNavBarView.swift; sourceTree = "<group>"; };
+		07B091EF29DB08F0008C8A85 /* PocaRanToolBarContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocaRanToolBarContainerView.swift; sourceTree = "<group>"; };
+		07B091F129DBD8FC008C8A85 /* PocaRanControlBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocaRanControlBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				070B8DBB29D8471300135BEA /* PocaRanView.swift */,
+				07B091EE29DB0654008C8A85 /* Helper */,
 			);
 			path = PocaRanView;
 			sourceTree = "<group>";
@@ -118,8 +127,19 @@
 			children = (
 				070B8DC029D8631700135BEA /* Font+.swift */,
 				070B8DD729D86E0400135BEA /* Color+.swift */,
+				07B091EA29DAFEFF008C8A85 /* UINavigationController+.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		07B091EE29DB0654008C8A85 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				07B091EC29DB0650008C8A85 /* PocaRanNavBarView.swift */,
+				07B091F129DBD8FC008C8A85 /* PocaRanControlBarView.swift */,
+				07B091EF29DB08F0008C8A85 /* PocaRanToolBarContainerView.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,11 +216,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07B091ED29DB0650008C8A85 /* PocaRanNavBarView.swift in Sources */,
 				070B8DC129D8631700135BEA /* Font+.swift in Sources */,
 				070B8DD829D86E0400135BEA /* Color+.swift in Sources */,
 				070B8DBE29D8472A00135BEA /* HomeView.swift in Sources */,
 				070B8DAC29D8455200135BEA /* PicturethatApp.swift in Sources */,
 				070B8DBC29D8471300135BEA /* PocaRanView.swift in Sources */,
+				07B091F029DB08F0008C8A85 /* PocaRanToolBarContainerView.swift in Sources */,
+				07B091F229DBD8FC008C8A85 /* PocaRanControlBarView.swift in Sources */,
+				07B091EB29DAFEFF008C8A85 /* UINavigationController+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
