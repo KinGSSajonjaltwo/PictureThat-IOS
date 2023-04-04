@@ -18,6 +18,8 @@
 		070B8DDF29D87B0100135BEA /* NotoSansKR-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 070B8DCF29D86C3800135BEA /* NotoSansKR-Light.otf */; };
 		070B8DE029D87B0100135BEA /* NotoSansKR-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 070B8DD029D86C3800135BEA /* NotoSansKR-Medium.otf */; };
 		070B8DE129D87B0100135BEA /* NotoSansKR-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 070B8DD129D86C3800135BEA /* NotoSansKR-Regular.otf */; };
+		078B618629DC47D900BA191C /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078B618529DC47D900BA191C /* Card.swift */; };
+		078B618829DC4B2600BA191C /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078B618729DC4B2600BA191C /* ModelData.swift */; };
 		07B091EB29DAFEFF008C8A85 /* UINavigationController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B091EA29DAFEFF008C8A85 /* UINavigationController+.swift */; };
 		07B091ED29DB0650008C8A85 /* PocaRanNavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B091EC29DB0650008C8A85 /* PocaRanNavBarView.swift */; };
 		07B091F029DB08F0008C8A85 /* PocaRanToolBarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B091EF29DB08F0008C8A85 /* PocaRanToolBarContainerView.swift */; };
@@ -38,6 +40,8 @@
 		070B8DD129D86C3800135BEA /* NotoSansKR-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Regular.otf"; sourceTree = "<group>"; };
 		070B8DD729D86E0400135BEA /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
 		070B8DDB29D87A9D00135BEA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		078B618529DC47D900BA191C /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		078B618729DC4B2600BA191C /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		07B091EA29DAFEFF008C8A85 /* UINavigationController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+.swift"; sourceTree = "<group>"; };
 		07B091EC29DB0650008C8A85 /* PocaRanNavBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocaRanNavBarView.swift; sourceTree = "<group>"; };
 		07B091EF29DB08F0008C8A85 /* PocaRanToolBarContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocaRanToolBarContainerView.swift; sourceTree = "<group>"; };
@@ -77,6 +81,7 @@
 				070B8DDB29D87A9D00135BEA /* Info.plist */,
 				070B8DC929D86A0900135BEA /* Fonts */,
 				070B8DAB29D8455200135BEA /* PicturethatApp.swift */,
+				078B618429DC47CB00BA191C /* Model */,
 				070B8DD629D86C4800135BEA /* Extensions */,
 				070B8DBA29D846FC00135BEA /* PocaRanView */,
 				070B8DB929D846A900135BEA /* HomeView */,
@@ -130,6 +135,15 @@
 				07B091EA29DAFEFF008C8A85 /* UINavigationController+.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		078B618429DC47CB00BA191C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				078B618529DC47D900BA191C /* Card.swift */,
+				078B618729DC4B2600BA191C /* ModelData.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		07B091EE29DB0654008C8A85 /* Helper */ = {
@@ -223,6 +237,8 @@
 				070B8DAC29D8455200135BEA /* PicturethatApp.swift in Sources */,
 				070B8DBC29D8471300135BEA /* PocaRanView.swift in Sources */,
 				07B091F029DB08F0008C8A85 /* PocaRanToolBarContainerView.swift in Sources */,
+				078B618829DC4B2600BA191C /* ModelData.swift in Sources */,
+				078B618629DC47D900BA191C /* Card.swift in Sources */,
 				07B091F229DBD8FC008C8A85 /* PocaRanControlBarView.swift in Sources */,
 				07B091EB29DAFEFF008C8A85 /* UINavigationController+.swift in Sources */,
 			);
@@ -367,7 +383,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = minsop.Picturethat;
+				PRODUCT_BUNDLE_IDENTIFIER = com.minsop.Picturethat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -397,7 +413,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = minsop.Picturethat;
+				PRODUCT_BUNDLE_IDENTIFIER = com.minsop.Picturethat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
