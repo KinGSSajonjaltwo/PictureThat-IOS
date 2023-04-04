@@ -13,7 +13,7 @@ struct PocaRanNavBarView: View {
     var body: some View {
         HStack{
             
-            backbutton
+            backButton
             
             Spacer()
             
@@ -23,11 +23,11 @@ struct PocaRanNavBarView: View {
             
             Spacer()
             
-            backbutton.opacity(0)
+            backButton.opacity(0)
             
         }
         .padding()
-        .background(            Color.white.ignoresSafeArea(edges: .top))
+        .background(Color.white.ignoresSafeArea(edges: .top))
     }
 }
 
@@ -39,7 +39,7 @@ struct PocaRanNavBarView_Previews: PreviewProvider {
 
 
 extension PocaRanNavBarView{
-    private var backbutton: some View{
+    private var backButton: some View{
         Button {
             presentationMode.wrappedValue.dismiss()
         } label: {

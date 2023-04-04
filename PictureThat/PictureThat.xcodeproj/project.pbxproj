@@ -20,7 +20,8 @@
 		070B8DE129D87B0100135BEA /* NotoSansKR-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 070B8DD129D86C3800135BEA /* NotoSansKR-Regular.otf */; };
 		07B091EB29DAFEFF008C8A85 /* UINavigationController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B091EA29DAFEFF008C8A85 /* UINavigationController+.swift */; };
 		07B091ED29DB0650008C8A85 /* PocaRanNavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B091EC29DB0650008C8A85 /* PocaRanNavBarView.swift */; };
-		07B091F029DB08F0008C8A85 /* PocaRanNavBarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B091EF29DB08F0008C8A85 /* PocaRanNavBarContainerView.swift */; };
+		07B091F029DB08F0008C8A85 /* PocaRanToolBarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B091EF29DB08F0008C8A85 /* PocaRanToolBarContainerView.swift */; };
+		07B091F229DBD8FC008C8A85 /* PocaRanControlBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B091F129DBD8FC008C8A85 /* PocaRanControlBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +40,8 @@
 		070B8DDB29D87A9D00135BEA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07B091EA29DAFEFF008C8A85 /* UINavigationController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+.swift"; sourceTree = "<group>"; };
 		07B091EC29DB0650008C8A85 /* PocaRanNavBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocaRanNavBarView.swift; sourceTree = "<group>"; };
-		07B091EF29DB08F0008C8A85 /* PocaRanNavBarContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocaRanNavBarContainerView.swift; sourceTree = "<group>"; };
+		07B091EF29DB08F0008C8A85 /* PocaRanToolBarContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocaRanToolBarContainerView.swift; sourceTree = "<group>"; };
+		07B091F129DBD8FC008C8A85 /* PocaRanControlBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocaRanControlBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,7 +136,8 @@
 			isa = PBXGroup;
 			children = (
 				07B091EC29DB0650008C8A85 /* PocaRanNavBarView.swift */,
-				07B091EF29DB08F0008C8A85 /* PocaRanNavBarContainerView.swift */,
+				07B091F129DBD8FC008C8A85 /* PocaRanControlBarView.swift */,
+				07B091EF29DB08F0008C8A85 /* PocaRanToolBarContainerView.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -219,7 +222,8 @@
 				070B8DBE29D8472A00135BEA /* HomeView.swift in Sources */,
 				070B8DAC29D8455200135BEA /* PicturethatApp.swift in Sources */,
 				070B8DBC29D8471300135BEA /* PocaRanView.swift in Sources */,
-				07B091F029DB08F0008C8A85 /* PocaRanNavBarContainerView.swift in Sources */,
+				07B091F029DB08F0008C8A85 /* PocaRanToolBarContainerView.swift in Sources */,
+				07B091F229DBD8FC008C8A85 /* PocaRanControlBarView.swift in Sources */,
 				07B091EB29DAFEFF008C8A85 /* UINavigationController+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -12,7 +12,7 @@ struct PocaRanView: View {
     
     var body: some View {
         
-        PocaRanNavBarContainerView {
+        PocaRanToolBarContainerView{
             VStack{
                 
             }
