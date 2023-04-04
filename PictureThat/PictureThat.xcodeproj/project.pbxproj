@@ -21,7 +21,9 @@
 		078B618629DC47D900BA191C /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078B618529DC47D900BA191C /* Card.swift */; };
 		078B618829DC4B2600BA191C /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078B618729DC4B2600BA191C /* ModelData.swift */; };
 		078B618C29DC522D00BA191C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 078B618B29DC522D00BA191C /* GoogleService-Info.plist */; };
-		078B618F29DC52E000BA191C /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 078B618E29DC52E000BA191C /* FirebaseAnalytics */; };
+		078B619129DC5AA200BA191C /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078B619029DC5AA200BA191C /* Network.swift */; };
+		078B619429DC669400BA191C /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 078B619329DC669400BA191C /* FirebaseAnalytics */; };
+		078B619629DC669400BA191C /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 078B619529DC669400BA191C /* FirebaseDatabase */; };
 		07B091EB29DAFEFF008C8A85 /* UINavigationController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B091EA29DAFEFF008C8A85 /* UINavigationController+.swift */; };
 		07B091ED29DB0650008C8A85 /* PocaRanNavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B091EC29DB0650008C8A85 /* PocaRanNavBarView.swift */; };
 		07B091F029DB08F0008C8A85 /* PocaRanToolBarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B091EF29DB08F0008C8A85 /* PocaRanToolBarContainerView.swift */; };
@@ -45,6 +47,7 @@
 		078B618529DC47D900BA191C /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		078B618729DC4B2600BA191C /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		078B618B29DC522D00BA191C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		078B619029DC5AA200BA191C /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		07B091EA29DAFEFF008C8A85 /* UINavigationController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+.swift"; sourceTree = "<group>"; };
 		07B091EC29DB0650008C8A85 /* PocaRanNavBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocaRanNavBarView.swift; sourceTree = "<group>"; };
 		07B091EF29DB08F0008C8A85 /* PocaRanToolBarContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocaRanToolBarContainerView.swift; sourceTree = "<group>"; };
@@ -56,7 +59,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				078B618F29DC52E000BA191C /* FirebaseAnalytics in Frameworks */,
+				078B619629DC669400BA191C /* FirebaseDatabase in Frameworks */,
+				078B619429DC669400BA191C /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				078B618529DC47D900BA191C /* Card.swift */,
+				078B619029DC5AA200BA191C /* Network.swift */,
 				078B618729DC4B2600BA191C /* ModelData.swift */,
 			);
 			path = Model;
@@ -178,7 +183,8 @@
 			);
 			name = Picturethat;
 			packageProductDependencies = (
-				078B618E29DC52E000BA191C /* FirebaseAnalytics */,
+				078B619329DC669400BA191C /* FirebaseAnalytics */,
+				078B619529DC669400BA191C /* FirebaseDatabase */,
 			);
 			productName = Picturethat;
 			productReference = 070B8DA829D8455200135BEA /* Picturethat.app */;
@@ -209,7 +215,7 @@
 			);
 			mainGroup = 070B8D9F29D8455200135BEA;
 			packageReferences = (
-				078B618D29DC52E000BA191C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				078B619229DC669400BA191C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 070B8DA929D8455200135BEA /* Products */;
 			projectDirPath = "";
@@ -244,6 +250,7 @@
 			files = (
 				07B091ED29DB0650008C8A85 /* PocaRanNavBarView.swift in Sources */,
 				070B8DC129D8631700135BEA /* Font+.swift in Sources */,
+				078B619129DC5AA200BA191C /* Network.swift in Sources */,
 				070B8DD829D86E0400135BEA /* Color+.swift in Sources */,
 				070B8DBE29D8472A00135BEA /* HomeView.swift in Sources */,
 				070B8DAC29D8455200135BEA /* PicturethatApp.swift in Sources */,
@@ -457,7 +464,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		078B618D29DC52E000BA191C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+		078B619229DC669400BA191C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
 			requirement = {
@@ -468,10 +475,15 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		078B618E29DC52E000BA191C /* FirebaseAnalytics */ = {
+		078B619329DC669400BA191C /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 078B618D29DC52E000BA191C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = 078B619229DC669400BA191C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAnalytics;
+		};
+		078B619529DC669400BA191C /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 078B619229DC669400BA191C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
