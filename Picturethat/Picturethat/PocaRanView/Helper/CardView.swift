@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CardView: View, Identifiable{
     
-    //Mark: -  P
+    // MARK: - Properties
     let id = UUID()
     var card: Card
     
@@ -34,19 +34,9 @@ struct CardView: View, Identifiable{
         }
         .offset(x: offset.width, y: offset.height * 0.4)
         .rotationEffect(.degrees(Double(offset.width / 40)))
-//        .gesture(
-//            DragGesture()
-//                .onChanged{ gesture in
-//                    offset = gesture.translation
-//                }
-//                .onEnded{_ in
-//                    swipeCard(width: offset.width)
-//                }
-//
-//        )
-        .onTapGesture {
-            flipCard ()
-        }
+//        .onTapGesture {
+//            flipCard ()
+//        }
 
     }
 }
