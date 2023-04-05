@@ -28,6 +28,7 @@
 		07B091ED29DB0650008C8A85 /* PocaRanNavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B091EC29DB0650008C8A85 /* PocaRanNavBarView.swift */; };
 		07B091F029DB08F0008C8A85 /* PocaRanToolBarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B091EF29DB08F0008C8A85 /* PocaRanToolBarContainerView.swift */; };
 		07B091F229DBD8FC008C8A85 /* PocaRanControlBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B091F129DBD8FC008C8A85 /* PocaRanControlBarView.swift */; };
+		07B5DAB329DD32D0004E389F /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B5DAB229DD32D0004E389F /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		07B091EC29DB0650008C8A85 /* PocaRanNavBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocaRanNavBarView.swift; sourceTree = "<group>"; };
 		07B091EF29DB08F0008C8A85 /* PocaRanToolBarContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocaRanToolBarContainerView.swift; sourceTree = "<group>"; };
 		07B091F129DBD8FC008C8A85 /* PocaRanControlBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocaRanControlBarView.swift; sourceTree = "<group>"; };
+		07B5DAB229DD32D0004E389F /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CardView.swift; path = PictureThat/PocaRanView/Helper/CardView.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				07B091EC29DB0650008C8A85 /* PocaRanNavBarView.swift */,
+				07B5DAB229DD32D0004E389F /* CardView.swift */,
 				07B091F129DBD8FC008C8A85 /* PocaRanControlBarView.swift */,
 				07B091EF29DB08F0008C8A85 /* PocaRanToolBarContainerView.swift */,
 			);
@@ -205,7 +208,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 070B8DA329D8455200135BEA /* Build configuration list for PBXProject "Picturethat" */;
+			buildConfigurationList = 070B8DA329D8455200135BEA /* Build configuration list for PBXProject "PictureThat" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -255,6 +258,7 @@
 				070B8DBE29D8472A00135BEA /* HomeView.swift in Sources */,
 				070B8DAC29D8455200135BEA /* PicturethatApp.swift in Sources */,
 				070B8DBC29D8471300135BEA /* PocaRanView.swift in Sources */,
+				07B5DAB329DD32D0004E389F /* CardView.swift in Sources */,
 				07B091F029DB08F0008C8A85 /* PocaRanToolBarContainerView.swift in Sources */,
 				078B618829DC4B2600BA191C /* ModelData.swift in Sources */,
 				078B618629DC47D900BA191C /* Card.swift in Sources */,
@@ -443,7 +447,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		070B8DA329D8455200135BEA /* Build configuration list for PBXProject "Picturethat" */ = {
+		070B8DA329D8455200135BEA /* Build configuration list for PBXProject "PictureThat" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				070B8DB429D8455300135BEA /* Debug */,

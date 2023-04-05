@@ -10,11 +10,19 @@ import SwiftUI
 struct PocaRanView: View {
     @Binding var cardCount: Int
     
+    var testDeck: [Card] = ModelData.cardDeck
+    
     var body: some View {
         
         PocaRanToolBarContainerView{
             VStack{
-                
+                ZStack{
+                    
+                    ForEach(self.testDeck.reversed(), id: \.self) { card in
+                        CardView(card: card)
+                    }
+                     
+                }
             }
         }
         .toolbar(.hidden, for: .navigationBar)

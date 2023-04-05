@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Card {
+struct Card: Hashable{
     
     var name : String
     var imgURL : String
