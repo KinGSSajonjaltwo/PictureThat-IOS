@@ -30,7 +30,7 @@ struct PocaRanView: View {
     // MARK: - body
     var body: some View {
         
-        PocaRanToolBarContainerView(cardCount: self.$cardCount, currentIntdex: self.$currentIndex){
+        PocaRanToolBarContainerView(cardCount: self.$cardCount, currentIntdex: self.$currentIndex, cardViews: self.$cardViews){
             VStack{
                 ZStack{
                     
