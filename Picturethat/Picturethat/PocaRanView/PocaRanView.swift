@@ -8,13 +8,15 @@
 import SwiftUI
 
 struct PocaRanView: View {
+    
     @Binding var cardCount: Int
+    @State var currentIndex: Int = 0
     
     var testDeck: [Card] = ModelData.cardDeck
     
     var body: some View {
         
-        PocaRanToolBarContainerView{
+        PocaRanToolBarContainerView(cardCount: self.$cardCount, currentIntdex: self.$currentIndex){
             VStack{
                 ZStack{
                     

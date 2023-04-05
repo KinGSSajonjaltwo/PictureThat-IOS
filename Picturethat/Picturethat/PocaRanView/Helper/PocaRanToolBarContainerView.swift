@@ -9,10 +9,18 @@ import SwiftUI
 
 struct PocaRanToolBarContainerView<Content: View>: View {
     
+    @Binding var currentIndex: Int
+    @Binding var cardCount: Int
+    
     let content: Content
     
-    init(@ViewBuilder content: () -> Content) {
+    
+    init(cardCount: Binding<Int>, currentIntdex: Binding<Int>, @ViewBuilder content: () -> Content) {
+        
+        self._cardCount = cardCount
+        self._currentIndex = currentIntdex
         self.content = content()
+        
     }
     
     var body: some View {
@@ -25,9 +33,9 @@ struct PocaRanToolBarContainerView<Content: View>: View {
                 .ignoresSafeArea()
             
             VStack(spacing: 0){
-                PocaRanNavBarView()
+                PocaRanNavBarView(currentIndex: self.$currentIndex, cardCount: self.$cardCount)
                 content.frame(maxWidth: .infinity, maxHeight: .infinity)
-                PocaRanControlBarView()
+                PocaRanControlBarView(currentIndex: self.$currentIndex, cardCount: self.$cardCount)
             }
             
         }
@@ -38,7 +46,7 @@ struct PocaRanToolBarContainerView<Content: View>: View {
 
 struct PocaRanToolBarContainerView_Previews: PreviewProvider {
     static var previews: some View {
-        PocaRanToolBarContainerView {
+        PocaRanToolBarContainerView(cardCount: .constant(4), currentIntdex: .constant(1)) {
             VStack{
                 
             }

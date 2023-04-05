@@ -9,6 +9,9 @@ import SwiftUI
 
 struct PocaRanControlBarView: View {
     
+    @Binding var currentIndex: Int
+    @Binding var cardCount: Int
+    
     var body: some View {
         HStack{
             backButton
@@ -24,7 +27,7 @@ struct PocaRanControlBarView: View {
 
 struct PocaRanControlBarView_Previews: PreviewProvider {
     static var previews: some View {
-        PocaRanControlBarView()
+        PocaRanControlBarView(currentIndex: .constant(1), cardCount: .constant(4))
     }
 }
 
