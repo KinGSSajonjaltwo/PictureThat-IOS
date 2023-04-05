@@ -14,11 +14,11 @@ struct PocaRanControlBarView: View {
     
     var body: some View {
         HStack{
-            backButton
+            backButton(currentIndex: self.$currentIndex)
             
             Spacer()
             
-            nextButton
+            nextButton(currentIndex: self.$currentIndex, cardCount: self.$cardCount)
         }
         .padding()
         .background(Color.white.ignoresSafeArea(edges: .bottom))
@@ -32,23 +32,45 @@ struct PocaRanControlBarView_Previews: PreviewProvider {
 }
 
 
-extension PocaRanControlBarView{
+struct backButton: View{
+    @Binding var currentIndex: Int
     
-    private var backButton: some View{
+    var body: some View {
+        
         Button {
-            print("prev card")
+            
+            if self.currentIndex > 0 {
+                self.currentIndex -= 1
+            }
+            
         } label: {
             Image(systemName: "arrow.counterclockwise.circle.fill")
-                .foregroundColor(Color.black01)
+                .foregroundColor(self.currentIndex > 0 ? Color.btnEnableColor : Color.btnDisableColor)
         }
+        
+        
     }
     
-    private var nextButton: some View{
+}
+
+struct nextButton: View{
+    @Binding var currentIndex: Int
+    @Binding var cardCount: Int
+    
+    var body: some View {
+        
         Button {
-            print("next card")
+            
+            if self.currentIndex < self.cardCount {
+                self.currentIndex += 1
+            }
+            
         } label: {
             Image(systemName: "arrow.forward.circle.fill")
-                .foregroundColor(Color.black01)
+                .foregroundColor(self.currentIndex < self.cardCount ? Color.btnEnableColor : Color.btnDisableColor)
         }
+        
+        
     }
+    
 }
