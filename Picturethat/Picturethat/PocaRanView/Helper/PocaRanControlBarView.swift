@@ -15,7 +15,7 @@ struct PocaRanControlBarView: View {
     
     var body: some View {
         HStack{
-            backButton(currentIndex: self.$currentIndex, cardViews: self.$cardViews)
+            backButton(currentIndex: self.$currentIndex, cardCount: self.$cardCount, cardViews: self.$cardViews)
             
             Spacer()
             
@@ -28,7 +28,9 @@ struct PocaRanControlBarView: View {
 
 struct backButton: View{
     @Binding var currentIndex: Int
+    @Binding var cardCount: Int
     @Binding var cardViews: [CardView]
+
     
     var body: some View {
         
@@ -36,27 +38,33 @@ struct backButton: View{
             
             if self.currentIndex > 0 {
                 
-                self.cardViews.removeLast()
-                self.currentIndex -= 1
+                if self.currentIndex < cardCount - 1{
                 
-                if self.currentIndex > 0 {
-                    
-                    let card = ModelData.cardDeck[currentIndex - 1]
-                    
-                    let newCardView = CardView(card: card)
-                    
-                    self.cardViews.insert(newCardView, at: 0)
+                    self.cardViews.removeLast()
                     
                 }
                 
+                setPreCard()
+                
+                currentIndex -= 1
             }
-            
+                
         } label: {
             Image(systemName: "arrow.counterclockwise.circle.fill")
                 .foregroundColor(self.currentIndex > 0 ? Color.btnEnableColor : Color.btnDisableColor)
         }
+        .disabled(currentIndex == 0)
         
         
+    }
+    
+    // MARK: - Set Next Card
+    private func setPreCard(){
+        let card = ModelData.cardDeck[currentIndex-1]
+        
+        let newCardView = CardView(card: card)
+        
+        self.cardViews.insert(newCardView, at: 0)
     }
     
 }
@@ -70,29 +78,37 @@ struct nextButton: View{
         
         Button {
             
-            if self.currentIndex < self.cardCount {
+            if self.currentIndex < self.cardCount - 1 {
+                
                 
                 self.cardViews.removeFirst()
-                self.currentIndex += 1
                 
-                if self.currentIndex < self.cardCount - 1  {
-                    
-                    let card = ModelData.cardDeck[currentIndex+1]
-                    
-                    let newCardView = CardView(card: card)
-                    
-                    self.cardViews.append(newCardView)
-                    
+                if self.currentIndex < (self.cardCount - 2) {
+                    //Get next Card
+                    self.setNextCard()
                 }
+                
+                self.currentIndex += 1
                 
             }
             
+            
         } label: {
             Image(systemName: "arrow.forward.circle.fill")
-                .foregroundColor(self.currentIndex < self.cardCount ? Color.btnEnableColor : Color.btnDisableColor)
+                .foregroundColor(( self.currentIndex <  self.cardCount - 1) ? Color.btnEnableColor : Color.btnDisableColor)
         }
+        .disabled(currentIndex == (cardCount - 1) )
         
         
+    }
+    
+    // MARK: - Set Next Card
+    private func setNextCard(){
+        let card = ModelData.cardDeck[currentIndex+2]
+        
+        let newCardView = CardView(card: card)
+        
+        self.cardViews.append(newCardView)
     }
     
 }
