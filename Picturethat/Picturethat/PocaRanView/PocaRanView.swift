@@ -71,7 +71,7 @@ struct PocaRanView: View {
 
 struct PocaRanView_Previews: PreviewProvider {
     static var previews: some View {
-        PocaRanView(cardCount: .constant(10))
+        PocaRanView(cardCount: .constant(4))
     }
 }
 
@@ -87,14 +87,12 @@ extension PocaRanView{
     // MARK: - Swipe Card
     private func swipeCard(width: CGFloat) {
         switch width{
-        case -500...(-200):
+        case -500...(-150):
             offset = CGSize(width: -1000, height: 0)
             self.moveCard()
-            self.offset = CGSize.zero
-        case 200...500:
+        case 150...500:
             offset = CGSize(width: 1000, height: 0)
             self.moveCard()
-            self.offset = CGSize.zero
         default:
             offset = .zero
         }
@@ -102,19 +100,31 @@ extension PocaRanView{
     
     // MARK: - Move Card
     private func moveCard(){
-        self.cardViews.removeFirst()
-        self.currentIndex += 1
         
-        if self.currentIndex < self.cardCount - 1  {
+        if self.currentIndex < self.cardCount - 1 {
             
-            let card = ModelData.cardDeck[currentIndex+1]
             
-            let newCardView = CardView(card: card)
+            self.cardViews.removeFirst()
             
-            self.cardViews.append(newCardView)
+            if self.currentIndex < self.cardCount - 2 {
+                //Get next Card
+                self.setNextCard()
+            }
+            
+            self.currentIndex += 1
             
         }
         
+        self.offset = CGSize.zero
+    }
+    
+    // MARK: - Set Next Card
+    private func setNextCard(){
+        let card = ModelData.cardDeck[currentIndex+2]
+        
+        let newCardView = CardView(card: card)
+        
+        self.cardViews.append(newCardView)
     }
     
 }
