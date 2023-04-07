@@ -20,9 +20,10 @@ struct PocaRanView: View {
     // MARK: - CARD Views
     @State var cardViews: [CardView] = {
         var views = [CardView]()
-        for index in 0..<2{
-            views.append(CardView(card: ModelData.cardDeck[index]))
-        }
+        
+        views.append(CardView(card: ModelData.cardDeck[0], isTopCard: true))
+        views.append(CardView(card: ModelData.cardDeck[1], isTopCard: false))
+        
         return views
     }()
     
@@ -55,9 +56,9 @@ struct PocaRanView: View {
                                         }
                                     }
                             )
-                            .onTapGesture {
-                                cardView.flipCard()
-                            }
+//                            .onTapGesture {
+//                                cardView.flipCard()
+//                            }
                     }
                     
                 }
@@ -105,6 +106,7 @@ extension PocaRanView{
             
             
             self.cardViews.removeFirst()
+            self.cardViews[0].isTopCard = true
             
             if self.currentIndex < self.cardCount - 2 {
                 //Get next Card
@@ -122,7 +124,7 @@ extension PocaRanView{
     private func setNextCard(){
         let card = ModelData.cardDeck[currentIndex+2]
         
-        let newCardView = CardView(card: card)
+        let newCardView = CardView(card: card, isTopCard: false)
         
         self.cardViews.append(newCardView)
     }
