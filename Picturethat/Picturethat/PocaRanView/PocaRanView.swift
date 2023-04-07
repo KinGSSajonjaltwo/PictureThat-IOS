@@ -21,8 +21,8 @@ struct PocaRanView: View {
     @State var cardViews: [CardView] = {
         var views = [CardView]()
         
-        views.append(CardView(card: ModelData.cardDeck[0], isTopCard: true))
-        views.append(CardView(card: ModelData.cardDeck[1], isTopCard: false))
+        views.append(CardView(card: ModelData.shared.cardDeck[0], isTopCard: true))
+        views.append(CardView(card: ModelData.shared.cardDeck[1], isTopCard: false))
         
         return views
     }()
@@ -122,7 +122,7 @@ extension PocaRanView{
     
     // MARK: - Set Next Card
     private func setNextCard(){
-        let card = ModelData.cardDeck[currentIndex+2]
+        let card = ModelData.shared.cardDeck[currentIndex+2]
         
         let newCardView = CardView(card: card, isTopCard: false)
         

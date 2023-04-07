@@ -48,7 +48,7 @@ struct PocaRanToolBarContainerView<Content: View>: View {
 struct PocaRanToolBarContainerView_Previews: PreviewProvider {
     
     struct PocaRanToolBarContainerViewContainer: View {
-        @State var views: [CardView] = [CardView(card: ModelData.cardDeck[0]),CardView(card: ModelData.cardDeck[1])]
+        @State var views: [CardView] = [CardView(card: ModelData.shared.cardDeck[0]),CardView(card: ModelData.shared.cardDeck[1])]
 
         var body: some View {
             PocaRanToolBarContainerView(cardCount: .constant(4), currentIntdex: .constant(1), cardViews: $views) {
