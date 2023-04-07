@@ -10,10 +10,10 @@ import Foundation
 class ModelData {
 
     static var cardDeck: [Card] = [
+        Card(name: "0", imgURL: "1 url"),
         Card(name: "1", imgURL: "1 url"),
         Card(name: "2", imgURL: "1 url"),
-        Card(name: "3", imgURL: "1 url"),
-        Card(name: "4", imgURL: "1 url")
+        Card(name: "3", imgURL: "1 url")
     ]
     
 }

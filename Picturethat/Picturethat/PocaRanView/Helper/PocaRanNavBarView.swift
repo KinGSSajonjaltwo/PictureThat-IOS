@@ -10,6 +10,9 @@ import SwiftUI
 struct PocaRanNavBarView: View {
     @Environment(\.presentationMode) var presentationMode
     
+    @Binding var currentIndex: Int
+    @Binding var cardCount: Int
+    
     var body: some View {
         HStack{
             
@@ -17,7 +20,7 @@ struct PocaRanNavBarView: View {
             
             Spacer()
             
-            Text("0/8")
+            Text("\(currentIndex)/\(cardCount)")
                 .font(.noto(.medium, size: 20))
                 .foregroundColor(.black01)
             
@@ -33,7 +36,7 @@ struct PocaRanNavBarView: View {
 
 struct PocaRanNavBarView_Previews: PreviewProvider {
     static var previews: some View {
-        PocaRanNavBarView()
+        PocaRanNavBarView(currentIndex: .constant(1), cardCount: .constant(4))
     }
 }
 

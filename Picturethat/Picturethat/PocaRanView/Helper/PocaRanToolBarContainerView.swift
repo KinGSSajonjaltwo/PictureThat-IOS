@@ -9,10 +9,19 @@ import SwiftUI
 
 struct PocaRanToolBarContainerView<Content: View>: View {
     
+    @Binding var currentIndex: Int
+    @Binding var cardCount: Int
+    @Binding var cardViews: [CardView]
     let content: Content
     
-    init(@ViewBuilder content: () -> Content) {
+    
+    init(cardCount: Binding<Int>, currentIntdex: Binding<Int>, cardViews: Binding<[CardView]>, @ViewBuilder content: () -> Content) {
+        
+        self._cardCount = cardCount
+        self._currentIndex = currentIntdex
+        self._cardViews = cardViews
         self.content = content()
+        
     }
     
     var body: some View {
@@ -25,9 +34,9 @@ struct PocaRanToolBarContainerView<Content: View>: View {
                 .ignoresSafeArea()
             
             VStack(spacing: 0){
-                PocaRanNavBarView()
+                PocaRanNavBarView(currentIndex: self.$currentIndex, cardCount: self.$cardCount)
                 content.frame(maxWidth: .infinity, maxHeight: .infinity)
-                PocaRanControlBarView()
+                PocaRanControlBarView(currentIndex: self.$currentIndex, cardCount: self.$cardCount, cardViews: self.$cardViews)
             }
             
         }
@@ -37,12 +46,26 @@ struct PocaRanToolBarContainerView<Content: View>: View {
 }
 
 struct PocaRanToolBarContainerView_Previews: PreviewProvider {
-    static var previews: some View {
-        PocaRanToolBarContainerView {
-            VStack{
-                
+    
+    struct PocaRanToolBarContainerViewContainer: View {
+        @State var views: [CardView] = [CardView(card: ModelData.cardDeck[0]),CardView(card: ModelData.cardDeck[1])]
+
+        var body: some View {
+            PocaRanToolBarContainerView(cardCount: .constant(4), currentIntdex: .constant(1), cardViews: $views) {
+                VStack{
+                    
+                }
             }
         }
-        
     }
+    
+
+    static var previews: some View {
+        
+        PocaRanToolBarContainerViewContainer()
+                      
+                   
+    }
+    
+    
 }
