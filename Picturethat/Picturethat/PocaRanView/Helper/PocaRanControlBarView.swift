@@ -61,7 +61,7 @@ struct backButton: View{
     // MARK: - Set Prev Card
     private func setPreCard(){
         
-        let card = ModelData.cardDeck[currentIndex-1]
+        let card = ModelData.shared.cardDeck[currentIndex-1]
         
         let newCardView = CardView(card: card, isTopCard: true)
         
@@ -107,7 +107,7 @@ struct nextButton: View{
     
     // MARK: - Set Next Card
     private func setNextCard(){
-        let card = ModelData.cardDeck[currentIndex+2]
+        let card = ModelData.shared.cardDeck[currentIndex+2]
         
         let newCardView = CardView(card: card, isTopCard: false)
         
@@ -120,7 +120,7 @@ struct PocaRanControlBarView_Previews: PreviewProvider {
     
     struct PocaRanControlBarViewContainer: View {
         
-        @State var views: [CardView] = [CardView(card: ModelData.cardDeck[0]),CardView(card: ModelData.cardDeck[1])]
+        @State var views: [CardView] = [CardView(card: ModelData.shared.cardDeck[0]),CardView(card: ModelData.shared.cardDeck[1])]
         var body: some View {
             PocaRanControlBarView(currentIndex: .constant(1), cardCount: .constant(4), cardViews: $views)
         }
