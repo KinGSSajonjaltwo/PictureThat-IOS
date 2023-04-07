@@ -11,13 +11,16 @@ struct CardView: View, Identifiable{
     
     // MARK: - Properties
     let id = UUID()
+    
     var card: Card
+    var isTopCard: Bool = false
     
     @State private var offset = CGSize.zero
     @State private var color: Color = .cardColor
     @State var backDegree = 0.0
     @State var frontDegree = -90.0
     @State var isFlipped = false
+    
 
     let width : CGFloat = 320
     let height : CGFloat = 420
@@ -34,9 +37,9 @@ struct CardView: View, Identifiable{
         }
         .offset(x: offset.width, y: offset.height * 0.4)
         .rotationEffect(.degrees(Double(offset.width / 40)))
-//        .onTapGesture {
-//            flipCard ()
-//        }
+        .onTapGesture {
+            flipCard ()
+        }
 
     }
 }
@@ -61,22 +64,26 @@ extension CardView{
     }
     
     func flipCard () {
-        isFlipped = !isFlipped
-        if isFlipped {
-            withAnimation(.linear(duration: durationAndDelay)) {
-                backDegree = 90
-            }
-            withAnimation(.linear(duration: durationAndDelay).delay(durationAndDelay)){
-                frontDegree = 0
-            }
-        } else {
-            withAnimation(.linear(duration: durationAndDelay)) {
-                frontDegree = -90
-            }
-            withAnimation(.linear(duration: durationAndDelay).delay(durationAndDelay)){
-                backDegree = 0
+        
+        if self.isTopCard{
+            isFlipped = !isFlipped
+            if isFlipped {
+                withAnimation(.linear(duration: durationAndDelay)) {
+                    backDegree = 90
+                }
+                withAnimation(.linear(duration: durationAndDelay).delay(durationAndDelay)){
+                    frontDegree = 0
+                }
+            } else {
+                withAnimation(.linear(duration: durationAndDelay)) {
+                    frontDegree = -90
+                }
+                withAnimation(.linear(duration: durationAndDelay).delay(durationAndDelay)){
+                    backDegree = 0
+                }
             }
         }
+        
     }
     
     

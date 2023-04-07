@@ -58,13 +58,15 @@ struct backButton: View{
         
     }
     
-    // MARK: - Set Next Card
+    // MARK: - Set Prev Card
     private func setPreCard(){
+        
         let card = ModelData.cardDeck[currentIndex-1]
         
-        let newCardView = CardView(card: card)
+        let newCardView = CardView(card: card, isTopCard: true)
         
         self.cardViews.insert(newCardView, at: 0)
+        self.cardViews[1].isTopCard = false
     }
     
 }
@@ -82,6 +84,7 @@ struct nextButton: View{
                 
                 
                 self.cardViews.removeFirst()
+                self.cardViews[0].isTopCard = true
                 
                 if self.currentIndex < (self.cardCount - 2) {
                     //Get next Card
@@ -106,7 +109,7 @@ struct nextButton: View{
     private func setNextCard(){
         let card = ModelData.cardDeck[currentIndex+2]
         
-        let newCardView = CardView(card: card)
+        let newCardView = CardView(card: card, isTopCard: false)
         
         self.cardViews.append(newCardView)
     }
