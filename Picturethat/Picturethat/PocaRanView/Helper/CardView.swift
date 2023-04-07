@@ -15,17 +15,13 @@ struct CardView: View, Identifiable{
     var card: Card
     var isTopCard: Bool = false
     
-    @State private var offset = CGSize.zero
-    @State private var color: Color = .cardColor
     @State var backDegree = 0.0
     @State var frontDegree = -90.0
     @State var isFlipped = false
     
-
     let width : CGFloat = 320
     let height : CGFloat = 420
     let durationAndDelay : CGFloat = 0.3
-    
     
     var body: some View {
         ZStack{
@@ -35,8 +31,6 @@ struct CardView: View, Identifiable{
             CardBack(width: width, height: height, name: card.name, degree: $backDegree)
             
         }
-        .offset(x: offset.width, y: offset.height * 0.4)
-        .rotationEffect(.degrees(Double(offset.width / 40)))
         .onTapGesture {
             flipCard ()
         }
@@ -51,17 +45,6 @@ struct CardView_Previews: PreviewProvider {
 }
 
 extension CardView{
-    
-    func swipeCard(width: CGFloat) {
-        switch width{
-        case -500...(-150):
-            offset = CGSize(width: -500, height: 0)
-        case 150...500:
-            offset = CGSize(width: 500, height: 0)
-        default:
-            offset = .zero
-        }
-    }
     
     func flipCard () {
         
@@ -85,7 +68,6 @@ extension CardView{
         }
         
     }
-    
     
 }
 
