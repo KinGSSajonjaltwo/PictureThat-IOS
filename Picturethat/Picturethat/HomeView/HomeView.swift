@@ -116,10 +116,7 @@ struct HomeView: View {
                         
                         
                         NavigationLink {
-                            PocaRanView(cardCount: self.$cardCount)
-                                .onAppear{
-                                    ModelData.shared.setCardDeck(cardCount: self.cardCount)
-                                }
+                            PocaRanView(cardViewModel: CardViewModel(cardCount: self.cardCount))
                         } label: {
                             Text("시작")
                                 .font(.noto(.bold, size: 16))
