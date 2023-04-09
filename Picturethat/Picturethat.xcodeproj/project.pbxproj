@@ -18,6 +18,7 @@
 		070B8DDF29D87B0100135BEA /* NotoSansKR-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 070B8DCF29D86C3800135BEA /* NotoSansKR-Light.otf */; };
 		070B8DE029D87B0100135BEA /* NotoSansKR-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 070B8DD029D86C3800135BEA /* NotoSansKR-Medium.otf */; };
 		070B8DE129D87B0100135BEA /* NotoSansKR-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 070B8DD129D86C3800135BEA /* NotoSansKR-Regular.otf */; };
+		0779FCD629E1530B003BA3FB /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0779FCD529E1530B003BA3FB /* CardViewModel.swift */; };
 		078B618629DC47D900BA191C /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078B618529DC47D900BA191C /* Card.swift */; };
 		078B618829DC4B2600BA191C /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078B618729DC4B2600BA191C /* ModelData.swift */; };
 		078B618C29DC522D00BA191C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 078B618B29DC522D00BA191C /* GoogleService-Info.plist */; };
@@ -45,6 +46,7 @@
 		070B8DD129D86C3800135BEA /* NotoSansKR-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Regular.otf"; sourceTree = "<group>"; };
 		070B8DD729D86E0400135BEA /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
 		070B8DDB29D87A9D00135BEA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0779FCD529E1530B003BA3FB /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CardViewModel.swift; path = PictureThat/Model/CardViewModel.swift; sourceTree = SOURCE_ROOT; };
 		078B618529DC47D900BA191C /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		078B618729DC4B2600BA191C /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		078B618B29DC522D00BA191C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				078B618529DC47D900BA191C /* Card.swift */,
 				078B619029DC5AA200BA191C /* Network.swift */,
 				078B618729DC4B2600BA191C /* ModelData.swift */,
+				0779FCD529E1530B003BA3FB /* CardViewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 				070B8DD829D86E0400135BEA /* Color+.swift in Sources */,
 				070B8DBE29D8472A00135BEA /* HomeView.swift in Sources */,
 				070B8DAC29D8455200135BEA /* PicturethatApp.swift in Sources */,
+				0779FCD629E1530B003BA3FB /* CardViewModel.swift in Sources */,
 				070B8DBC29D8471300135BEA /* PocaRanView.swift in Sources */,
 				07B5DAB329DD32D0004E389F /* CardView.swift in Sources */,
 				07B091F029DB08F0008C8A85 /* PocaRanToolBarContainerView.swift in Sources */,
