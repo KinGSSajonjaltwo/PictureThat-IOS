@@ -10,11 +10,21 @@ import SwiftUI
 class CardViewModel: ObservableObject{
     
     @Published var cardViews: [CardView] = [CardView]()
-    @Published var cardCount: Int = 4
     @Published var currentIndex: Int = 0
     
-    var cards: [Card] = [Card]()
+    private var cardCount: Int
+    private var cards: [Card] = [Card]()
     
+    // MARK: - init based on cardCount
+    init(cardCount: Int) {
+        
+        self.cardCount = cardCount
+        self.getCards()
+        self.setInitialCardViews()
+        
+    }
+    
+    // MARK: - Get Cards
     func getCards(){
         self.cards = [Card]()
         
@@ -66,13 +76,33 @@ class CardViewModel: ObservableObject{
     
     func setPrevCardView(){
         
-        let card = self.cards[currentIndex-1]
-        let newCardView = CardView(card: card, isTopCard: true)
-        self.cardViews.insert(newCardView, at: 0)
+        if self.currentIndex > 0 {
+            
+            
+            if self.currentIndex < cardCount - 1{
+            
+                self.cardViews.removeLast()
+                
+            }
+            
+            let card = self.cards[currentIndex-1]
+            let newCardView = CardView(card: card, isTopCard: true)
+            self.cardViews.insert(newCardView, at: 0)
+            
+            self.cardViews[1].isTopCard = false
+            
+            self.currentIndex -= 1
+            
+        }
         
-        self.cardViews[1].isTopCard = false
         
-        self.currentIndex -= 1
+        
+    }
+    
+    func isTopCard(cardView: CardView) -> Bool{
+        
+        guard let index = self.cardViews.firstIndex(where: { $0.id == cardView.id }) else {return false}
+        return index == 0
         
     }
     
