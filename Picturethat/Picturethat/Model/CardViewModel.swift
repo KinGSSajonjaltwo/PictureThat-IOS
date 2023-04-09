@@ -19,7 +19,6 @@ class CardViewModel: ObservableObject{
     init(cardCount: Int) {
         
         self.cardCount = cardCount
-        self.getCards()
         self.setInitialCardViews()
         
     }
@@ -94,11 +93,11 @@ class CardViewModel: ObservableObject{
             self.currentIndex -= 1
             
         }
-        
-        
+
         
     }
     
+    // MARK: - is Top Card
     func isTopCard(cardView: CardView) -> Bool{
         
         guard let index = self.cardViews.firstIndex(where: { $0.id == cardView.id }) else {return false}
@@ -107,6 +106,19 @@ class CardViewModel: ObservableObject{
     }
     
     
+    // MARK: - is Fist Card
+    func isFirstCard() -> Bool{
+        return self.currentIndex == 0
+    }
     
+    // MARK: - is Last Card
+    func isLastCard() -> Bool{
+        return self.currentIndex == self.cardCount - 1
+    }
+    
+    // MARK: - NavBarText
+    func getNavBarText() -> String{
+        return "\(self.currentIndex)/\(self.cardCount)"
+    }
     
 }
