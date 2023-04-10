@@ -6,16 +6,51 @@
 //
 import Foundation
 import FirebaseDatabase
-import Combine
 
-final class Network: ObservableObject {
+final class Network {
     
-    @Published var resultCard : Card = Card(name: "", imgURL: "")
+    static var shared: Network = Network()
+    var resultCard : Card = Card(name: "", imgURL: "")
+    
     
     let ref = Database.database().reference()
     
-    func testgetCard(index: Int) -> Card{
+    
+    func getRandomCards(cardCount: Int) -> [Card]{
         
+        var resultCards: [Card] = [Card]()
+        
+        
+        
+        
+        return resultCards
+        
+    }
+    
+    func getVer1Length() -> Int{
+        
+        var result: Int = 0
+        
+        self.ref.child("ver1Length").getData(completion: { error, snapshot in
+            
+            guard error == nil else {
+                print(error!.localizedDescription)
+                return;
+                
+            }
+            
+            result = snapshot?.value as? Int ?? 10
+            
+        })
+        
+        return result
+    }
+    
+    
+    func getCardByIndx(index: Int) -> Card{
+        
+        
+        var resultCard: Card = Card(name: "", imgURL: "")
         
         self.ref.child("\(index)").child("name").getData(completion: { error, snapshot in
             
@@ -26,11 +61,11 @@ final class Network: ObservableObject {
             }
             
             print("\(snapshot?.value as? String ?? "No")")
-            self.resultCard.name = snapshot?.value as? String ?? "Unknown"
+            resultCard.name = snapshot?.value as? String ?? "Unknown"
             
         })
         
-        self.ref.child("\(index)").child("imgURL").getData(completion: { error, snapshot in
+        self.ref.child("\(index)").child("url").getData(completion: { error, snapshot in
             
             guard error == nil else {
                 print(error!.localizedDescription)
@@ -39,10 +74,9 @@ final class Network: ObservableObject {
             }
             
             print("\(snapshot?.value as? String ?? "No")")
-            self.resultCard.imgURL = snapshot?.value as? String ?? "Unknown"
+            resultCard.imgURL = snapshot?.value as? String ?? "Unknown"
             
         })
-        
         
         
         return resultCard
