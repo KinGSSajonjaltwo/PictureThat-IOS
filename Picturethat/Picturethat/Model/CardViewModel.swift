@@ -25,6 +25,7 @@ class CardViewModel: ObservableObject{
     
     // MARK: - Get Cards
     func getCards(){
+        
         self.cards = [Card]()
         
         for index in 0..<self.cardCount{
@@ -42,8 +43,8 @@ class CardViewModel: ObservableObject{
         
         self.cardViews = [CardView]()
         
-        self.cardViews.append(CardView(card: ModelData.shared.cardDeck[0], isTopCard: true))
-        self.cardViews.append(CardView(card: ModelData.shared.cardDeck[1], isTopCard: false))
+        self.cardViews.append(CardView(card: self.cards[0], isTopCard: true))
+        self.cardViews.append(CardView(card: self.cards[1], isTopCard: false))
         
     }
     
