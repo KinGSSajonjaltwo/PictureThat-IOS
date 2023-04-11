@@ -25,6 +25,7 @@ class CardViewModel: ObservableObject{
     
     // MARK: - Get Cards
     func getCards(){
+        
         self.cards = [Card]()
         
         for index in 0..<self.cardCount{
