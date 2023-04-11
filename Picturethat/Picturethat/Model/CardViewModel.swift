@@ -42,8 +42,8 @@ class CardViewModel: ObservableObject{
         
         self.cardViews = [CardView]()
         
-        self.cardViews.append(CardView(card: ModelData.shared.cardDeck[0], isTopCard: true))
-        self.cardViews.append(CardView(card: ModelData.shared.cardDeck[1], isTopCard: false))
+        self.cardViews.append(CardView(card: self.cards[0], isTopCard: true))
+        self.cardViews.append(CardView(card: self.cards[1], isTopCard: false))
         
     }
     

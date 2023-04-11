@@ -20,7 +20,6 @@
 		070B8DE129D87B0100135BEA /* NotoSansKR-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 070B8DD129D86C3800135BEA /* NotoSansKR-Regular.otf */; };
 		0779FCD629E1530B003BA3FB /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0779FCD529E1530B003BA3FB /* CardViewModel.swift */; };
 		078B618629DC47D900BA191C /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078B618529DC47D900BA191C /* Card.swift */; };
-		078B618829DC4B2600BA191C /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078B618729DC4B2600BA191C /* ModelData.swift */; };
 		078B618C29DC522D00BA191C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 078B618B29DC522D00BA191C /* GoogleService-Info.plist */; };
 		078B619129DC5AA200BA191C /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078B619029DC5AA200BA191C /* Network.swift */; };
 		078B619429DC669400BA191C /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 078B619329DC669400BA191C /* FirebaseAnalytics */; };
@@ -48,7 +47,6 @@
 		070B8DDB29D87A9D00135BEA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0779FCD529E1530B003BA3FB /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CardViewModel.swift; path = PictureThat/Model/CardViewModel.swift; sourceTree = SOURCE_ROOT; };
 		078B618529DC47D900BA191C /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
-		078B618729DC4B2600BA191C /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		078B618B29DC522D00BA191C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		078B619029DC5AA200BA191C /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		07B091EA29DAFEFF008C8A85 /* UINavigationController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+.swift"; sourceTree = "<group>"; };
@@ -155,7 +153,6 @@
 			children = (
 				078B618529DC47D900BA191C /* Card.swift */,
 				078B619029DC5AA200BA191C /* Network.swift */,
-				078B618729DC4B2600BA191C /* ModelData.swift */,
 				0779FCD529E1530B003BA3FB /* CardViewModel.swift */,
 			);
 			path = Model;
@@ -264,7 +261,6 @@
 				070B8DBC29D8471300135BEA /* PocaRanView.swift in Sources */,
 				07B5DAB329DD32D0004E389F /* CardView.swift in Sources */,
 				07B091F029DB08F0008C8A85 /* PocaRanToolBarContainerView.swift in Sources */,
-				078B618829DC4B2600BA191C /* ModelData.swift in Sources */,
 				078B618629DC47D900BA191C /* Card.swift in Sources */,
 				07B091F229DBD8FC008C8A85 /* PocaRanControlBarView.swift in Sources */,
 				07B091EB29DAFEFF008C8A85 /* UINavigationController+.swift in Sources */,
