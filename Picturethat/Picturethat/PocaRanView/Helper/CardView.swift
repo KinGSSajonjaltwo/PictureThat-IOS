@@ -95,30 +95,37 @@ struct CardFront : View {
     }
     
     var PocaImage: some View {
+        
         AsyncImage(url: URL(string: self.imgURL)) { phase in
-            if let image = phase.image {
-                image
-                    .resizable()
-                    .scaledToFit()
-                    .background(.white)
-                    .padding()
-                    .frame(width: self.width, height: self.height)
-            }else if phase.error != nil{
-                Image(systemName: "questionmark.square.dashed")
+            
+            switch phase{
+            case .empty:
+                ProgressView()
+                    .tint(Color.black01)
+            case.success(let returnedImage):
+                returnedImage
                     .resizable()
                     .scaledToFit()
                     .background(.white)
                     .padding()
                     .frame(width: self.width, height: self.height)
                 
-            }else {
-//                RoundedRectangle(cornerRadius: 10)
-//                    .foregroundColor(.clear)
-//                    .padding()
-//                    .frame(width: self.width, height: self.height)
-                ProgressView()
-                    .foregroundColor(Color.black01)
+            case.failure:
+                Image(systemName: "questionmark.square.dashed")
+                    .resizable()
+                    .scaledToFit()
+                    .background(.white)
+                    .padding()
+                    .frame(width: self.width, height: self.height)
+            default:
+                Image(systemName: "questionmark.square.dashed")
+                    .resizable()
+                    .scaledToFit()
+                    .background(.white)
+                    .padding()
+                    .frame(width: self.width, height: self.height)
             }
+            
         }
     }
 }
