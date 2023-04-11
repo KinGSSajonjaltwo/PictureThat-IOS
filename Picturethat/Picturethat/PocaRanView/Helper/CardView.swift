@@ -95,6 +95,7 @@ struct CardFront : View {
     }
     
     var PocaImage: some View {
+        
         AsyncImage(url: URL(string: self.imgURL)) { phase in
             if let image = phase.image {
                 image
@@ -112,12 +113,10 @@ struct CardFront : View {
                     .frame(width: self.width, height: self.height)
                 
             }else {
-//                RoundedRectangle(cornerRadius: 10)
-//                    .foregroundColor(.clear)
-//                    .padding()
-//                    .frame(width: self.width, height: self.height)
+                
                 ProgressView()
-                    .foregroundColor(Color.black01)
+                    .tint(Color.black01)
+                
             }
         }
     }
