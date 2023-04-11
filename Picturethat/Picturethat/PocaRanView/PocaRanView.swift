@@ -50,6 +50,10 @@ struct PocaRanView: View {
         }
         .toolbar(.hidden, for: .navigationBar)
         .environmentObject(cardViewModel)
+        .task {
+            cardViewModel.setInitialCardViews()
+        }
+        
     
     }
 }

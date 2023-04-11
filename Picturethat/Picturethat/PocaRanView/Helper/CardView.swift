@@ -15,9 +15,9 @@ struct CardView: View, Identifiable{
     var card: Card
     var isTopCard: Bool = false
     
-    @State var backDegree = 0.0
-    @State var frontDegree = -90.0
-    @State var isFlipped = false
+    @State var backDegree = 90.0
+    @State var frontDegree = 0.0
+    @State var isFlipped = true
     
     let width : CGFloat = 320
     let height : CGFloat = 420
@@ -26,9 +26,9 @@ struct CardView: View, Identifiable{
     var body: some View {
         ZStack{
             
-            CardFront(width: width, height: height, imgURL: card.imgURL, degree: $frontDegree)
-            
             CardBack(width: width, height: height, name: card.name, degree: $backDegree)
+            
+            CardFront(width: width, height: height, imgURL: card.imgURL, degree: $frontDegree)
             
         }
         .onTapGesture {
@@ -36,11 +36,13 @@ struct CardView: View, Identifiable{
         }
 
     }
+    
+    
 }
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        CardView(card: Card(name: "#테스트\n#이미지", imgURL: "testCardURL.com"))
+        CardView(card: Card(name: "#테스트\n#이미지", imgURL: "https://firebasestorage.googleapis.com/v0/b/picturethat-9f8ae.appspot.com/o/ver1%2Fver1-1.png?alt=media&token=c382a1f6-79cd-4df3-898d-ee46f3221a5a"), isTopCard: true)
     }
 }
 
@@ -85,14 +87,39 @@ struct CardFront : View {
                 .frame(width: width, height: height)
                 .shadow(color: .gray, radius: 2, x: 0, y: 0)
             
-            Image("testPocaImg")
-                .resizable()
-                .padding()
-                .frame(width: width, height: height)
+            PocaImage
                 
             
 
         }.rotation3DEffect(Angle(degrees: degree), axis: (x: 0, y: 1, z: 0))
+    }
+    
+    var PocaImage: some View {
+        AsyncImage(url: URL(string: self.imgURL)) { phase in
+            if let image = phase.image {
+                image
+                    .resizable()
+                    .scaledToFit()
+                    .background(.white)
+                    .padding()
+                    .frame(width: self.width, height: self.height)
+            }else if phase.error != nil{
+                Image(systemName: "questionmark.square.dashed")
+                    .resizable()
+                    .scaledToFit()
+                    .background(.white)
+                    .padding()
+                    .frame(width: self.width, height: self.height)
+                
+            }else {
+//                RoundedRectangle(cornerRadius: 10)
+//                    .foregroundColor(.clear)
+//                    .padding()
+//                    .frame(width: self.width, height: self.height)
+                ProgressView()
+                    .foregroundColor(Color.black01)
+            }
+        }
     }
 }
 
