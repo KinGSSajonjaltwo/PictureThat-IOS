@@ -7,19 +7,19 @@
 
 import SwiftUI
 
+@MainActor
 class CardViewModel: ObservableObject{
     
     @Published var cardViews: [CardView] = [CardView]()
     @Published var currentIndex: Int = 0
     
     private var cardCount: Int
-    private var cards: [Card] = [Card]()
+    @Published var cards: [Card] = [Card]()
     
     // MARK: - init based on cardCount
     init(cardCount: Int) {
         
         self.cardCount = cardCount
-        self.setInitialCardViews()
         
     }
     
@@ -29,7 +29,7 @@ class CardViewModel: ObservableObject{
         
         for index in 0..<self.cardCount{
             
-            self.cards.append(Card(name: "\(index)", imgURL: "\(index) url"))
+            self.cards.append(Card(name: "\(index)", imgURL: "https://firebasestorage.googleapis.com/v0/b/picturethat-9f8ae.appspot.com/o/ver1%2Fver1-1.png?alt=media&token=c382a1f6-79cd-4df3-898d-ee46f3221a5a"))
             
         }
         
