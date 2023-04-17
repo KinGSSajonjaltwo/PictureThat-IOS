@@ -91,6 +91,7 @@
 				070B8DDB29D87A9D00135BEA /* Info.plist */,
 				070B8DC929D86A0900135BEA /* Fonts */,
 				070B8DAB29D8455200135BEA /* PicturethatApp.swift */,
+				079EB62529ED961D006BBC54 /* Manager */,
 				078B618429DC47CB00BA191C /* Model */,
 				070B8DD629D86C4800135BEA /* Extensions */,
 				070B8DBA29D846FC00135BEA /* PocaRanView */,
@@ -152,10 +153,17 @@
 			isa = PBXGroup;
 			children = (
 				078B618529DC47D900BA191C /* Card.swift */,
-				078B619029DC5AA200BA191C /* Network.swift */,
 				0779FCD529E1530B003BA3FB /* CardViewModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		079EB62529ED961D006BBC54 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				078B619029DC5AA200BA191C /* Network.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 		07B091EE29DB0654008C8A85 /* Helper */ = {
