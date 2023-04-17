@@ -7,9 +7,13 @@
 
 import Foundation
 
-struct Card: Hashable{
+struct Card: Hashable, Codable{
     
     var name : String
     var imgURL : String
     
+    enum CodingKeys: String, CodingKey{
+        case name 
+        case imgURL = "url"
+    }
 }
