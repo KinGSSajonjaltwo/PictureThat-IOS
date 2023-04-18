@@ -137,11 +137,6 @@ struct HomeView: View {
             }
         }
         .navigationViewStyle(StackNavigationViewStyle())
-        .onAppear{
-            Task{
-                Network.shared.getVer1Length()
-            }
-        }
     }
 }
 
