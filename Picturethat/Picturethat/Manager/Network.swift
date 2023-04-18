@@ -12,7 +12,6 @@ final class Network{
     static let shared = Network()
     
     // MARK: - Properties
-    var cards: [Card] = []
     private var indexHistory: Set<Int> = Set<Int>()
     private var ver1Length: Int = 30
     
@@ -36,25 +35,33 @@ final class Network{
     }
     
     // MARK: - GET a set number of cards
-    func getCards(count: Int) -> Void{
+    func getCards(count: Int,completionHandler: @escaping ([Card]) -> Void) {
+        var cards: [Card] = []
         let indexes = getIndexes(count: count)
+        let dispatchGroup = DispatchGroup()
         
         for i in indexes {
+            dispatchGroup.enter()
             ref.child("\(i)").observeSingleEvent(of: .value) { snapshot in
-                guard let card = snapshot.value else { return }
+                guard let card = snapshot.value else {
+                    dispatchGroup.leave()
+                    return
+                }
                 do {
                     let jsonData = try JSONSerialization.data(withJSONObject: card, options: [])
                     let decoder = JSONDecoder()
                     let resultCard = try decoder.decode(Card.self, from: jsonData)
-                    self.cards.append(resultCard)
-                    print(self.cards)
+                    cards.append(resultCard)
                 } catch {
                     print(error.localizedDescription)
                 }
+                dispatchGroup.leave()
             }
-            
         }
         
+        dispatchGroup.notify(queue: .main) {
+            completionHandler(cards)
+        }
     }
     
     // MARK: - GET Ver1 Length
