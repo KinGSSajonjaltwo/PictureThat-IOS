@@ -53,7 +53,7 @@ struct PocaRanView: View {
         .environmentObject(cardViewModel)
         .onAppear{
             Task{
-                cardViewModel.setCardsAndCardViews()
+                await cardViewModel.setCardsAndCardViews()
             }
         }
         
@@ -74,14 +74,12 @@ extension PocaRanView{
         case -500...(-150):
             offset = CGSize(width: -1000, height: 0)
             self.cardViewModel.setNextCardView()
-            offset = .zero
         case 150...500:
             offset = CGSize(width: 1000, height: 0)
             self.cardViewModel.setNextCardView()
-            offset = .zero
-        default:
-            offset = .zero
+        default: break
         }
+        offset = .zero
     }
     
 }

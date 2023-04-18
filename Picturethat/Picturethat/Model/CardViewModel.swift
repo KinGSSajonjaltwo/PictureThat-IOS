@@ -10,11 +10,11 @@ import SwiftUI
 @MainActor
 class CardViewModel: ObservableObject{
     
-    @Published var cardViews: [CardView] = [CardView]()
+    @Published var cardViews: [CardView] = []
     @Published var currentIndex: Int = 0
     
     private var cardCount: Int
-    @Published var cards: [Card] = [Card]()
+    @Published var cards: [Card] = []
     
     // MARK: - init based on cardCount
     init(cardCount: Int) {
@@ -28,7 +28,6 @@ class CardViewModel: ObservableObject{
         
         Network.shared.getCards(count: self.cardCount) {cards in
             self.cards = cards
-            self.cardViews = [CardView]()
             self.cardViews.append(CardView(card: self.cards[0], isTopCard: true))
             self.cardViews.append(CardView(card: self.cards[1], isTopCard: false))
         }
