@@ -22,29 +22,16 @@ class CardViewModel: ObservableObject{
         self.cardCount = cardCount
         
     }
-    
-    // MARK: - Get Cards
-    func getCards(){
         
-        self.cards = [Card]()
-        
-        for index in 0..<self.cardCount{
-            
-            self.cards.append(Card(name: "\(index)", imgURL: "https://firebasestorage.googleapis.com/v0/b/picturethat-9f8ae.appspot.com/o/ver1%2Fver1-1.png?alt=media&token=c382a1f6-79cd-4df3-898d-ee46f3221a5a"))
-            
-        }
-        
-    }
-    
     // MARK: - Set Initial Card View
-    func setInitialCardViews(){
+    func setCardsAndCardViews(){
         
-        getCards()
-        
-        self.cardViews = [CardView]()
-        
-        self.cardViews.append(CardView(card: self.cards[0], isTopCard: true))
-        self.cardViews.append(CardView(card: self.cards[1], isTopCard: false))
+        Network.shared.getCards(count: self.cardCount) {cards in
+            self.cards = cards
+            self.cardViews = [CardView]()
+            self.cardViews.append(CardView(card: self.cards[0], isTopCard: true))
+            self.cardViews.append(CardView(card: self.cards[1], isTopCard: false))
+        }
         
     }
     
