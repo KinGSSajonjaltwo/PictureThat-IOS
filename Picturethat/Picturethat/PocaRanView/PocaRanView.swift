@@ -30,6 +30,7 @@ struct PocaRanView: View {
                                 .degrees(self.cardViewModel.isTopCard(cardView: cardView) ? Double(offset.width / 40) : Double(0.0))
                             )
                             .gesture(
+                                
                                 DragGesture()
                                     .onChanged{ gesture in
                                         
@@ -50,8 +51,10 @@ struct PocaRanView: View {
         }
         .toolbar(.hidden, for: .navigationBar)
         .environmentObject(cardViewModel)
-        .task {
-            cardViewModel.setInitialCardViews()
+        .onAppear{
+            Task{
+                await cardViewModel.setCardsAndCardViews()
+            }
         }
         
     
@@ -71,14 +74,12 @@ extension PocaRanView{
         case -500...(-150):
             offset = CGSize(width: -1000, height: 0)
             self.cardViewModel.setNextCardView()
-            offset = .zero
         case 150...500:
             offset = CGSize(width: 1000, height: 0)
             self.cardViewModel.setNextCardView()
-            offset = .zero
-        default:
-            offset = .zero
+        default: break
         }
+        offset = .zero
     }
     
 }
