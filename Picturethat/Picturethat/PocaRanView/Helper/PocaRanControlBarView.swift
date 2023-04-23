@@ -20,11 +20,11 @@ struct PocaRanControlBarView: View {
             } label: {
                 Image(systemName: "arrow.counterclockwise.circle.fill")
                     .foregroundColor(
-                        self.cardViewModel.isFirstCard() ?
+                        (!self.cardViewModel.isLoaded ||  self.cardViewModel.isFirstCard()) ?
                         Color.btnDisableColor:
                         Color.btnEnableColor)
             }
-            .disabled(self.cardViewModel.isFirstCard())
+            .disabled(!self.cardViewModel.isLoaded ||  self.cardViewModel.isFirstCard())
             
             Spacer()
             
@@ -35,9 +35,9 @@ struct PocaRanControlBarView: View {
                 
             } label: {
                 Image(systemName: "arrow.forward.circle.fill")
-                    .foregroundColor( self.cardViewModel.isLastCard() ? Color.btnDisableColor: Color.btnEnableColor)
+                    .foregroundColor( (!self.cardViewModel.isLoaded || self.cardViewModel.isLastCard()) ? Color.btnDisableColor: Color.btnEnableColor)
             }
-            .disabled(self.cardViewModel.isLastCard())
+            .disabled(!self.cardViewModel.isLoaded || self.cardViewModel.isLastCard())
             
         }
         .padding()
