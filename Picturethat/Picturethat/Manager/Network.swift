@@ -35,7 +35,7 @@ final class Network{
     }
     
     // MARK: - GET a set number of cards
-    func getCards(count: Int,completionHandler: @escaping ([Card]) -> Void) {
+    func getCards(count: Int,completionWithLoadingHandler: @escaping () -> Void, completionHandler: @escaping ([Card]) -> Void) {
         var cards: [Card] = []
         let indexes = getIndexes(count: count)
         let dispatchGroup = DispatchGroup()
@@ -59,6 +59,8 @@ final class Network{
             }
         }
         
+        completionWithLoadingHandler()
+
         dispatchGroup.notify(queue: .main) {
             completionHandler(cards)
         }

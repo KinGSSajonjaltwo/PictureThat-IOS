@@ -15,6 +15,7 @@ class CardViewModel: ObservableObject{
     
     private var cardCount: Int
     @Published var cards: [Card] = []
+    @Published var isLoading: Bool = false
     
     // MARK: - init based on cardCount
     init(cardCount: Int) {
@@ -26,11 +27,14 @@ class CardViewModel: ObservableObject{
     // MARK: - Set Initial Card View
     func setCardsAndCardViews(){
         
-        Network.shared.getCards(count: self.cardCount) {cards in
+        Network.shared.getCards(count: self.cardCount, completionWithLoadingHandler: {
+//            self.cardViews.append(CardView(card: Card(name: "준비중", imgURL: "준비중"),isTopCard: true))
+        }, completionHandler: { cards in
             self.cards = cards
-            self.cardViews.append(CardView(card: self.cards[0], isTopCard: true))
-            self.cardViews.append(CardView(card: self.cards[1], isTopCard: false))
-        }
+            self.cardViews.append(CardView(card: self.cards[0], isTopCard: false))
+            self.isLoading = true
+        })
+        
         
     }
     
