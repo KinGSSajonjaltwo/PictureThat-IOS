@@ -8,16 +8,6 @@ import SwiftUI
 
 extension Color {
  
-    static let black01 = Color(hex: "4A4A4A")
-    static let black02 = Color(hex: "595959")
-    static let black03 = Color(hex: "3D3D3D")
-    static let black04 = Color(hex: "737373")
-    
-    static let btnEnableColor = Color(hex: "4A4A4A")
-    static let btnDisableColor = Color(hex: "4A4A4A" , opacity: 0.2)
-    
-    static let cardColor = Color(hex: "e0e0e0")
-    static let cardTextColor = Color(hex: "686868")
 }
 
 
