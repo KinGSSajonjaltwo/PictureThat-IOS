@@ -113,9 +113,9 @@
 		0747F1212A00213A00DFEE4F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				0747F1272A00228000DFEE4F /* CardSelectionView */,
-				0747F1242A00226100DFEE4F /* DeckSelectionView */,
 				0747F11B2A001FAA00DFEE4F /* HomeView */,
+				0747F1242A00226100DFEE4F /* DeckSelectionView */,
+				0747F1272A00228000DFEE4F /* CardSelectionView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
