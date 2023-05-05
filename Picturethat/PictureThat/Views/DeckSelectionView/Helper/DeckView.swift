@@ -9,16 +9,15 @@ import SwiftUI
 
 struct DeckView: View {
     var size: CGSize
+    var deckImage: String
     let cornerRadius: CGFloat = 15
     let borderWidth: CGFloat = 4
     
-    init(width: CGFloat, height: CGFloat) {
-        size = CGSize(width: width, height: height)
+    init(width: CGFloat = 300, height: CGFloat = 400, deckImage: String = "img_heartDeckThumbnail") {
+        self.size = CGSize(width: width, height: height)
+        self.deckImage = deckImage
     }
     
-    init(){
-        self.init(width: 300, height: 400)
-    }
     
     var body: some View {
         
@@ -29,7 +28,7 @@ struct DeckView: View {
                 .frame(width: size.width, height: size.height)
                 .shadow(color: Color.deckShadowColor, radius: 2, x: 0, y: 2)
             
-            Image("img_heartDeckThumbnail")
+            Image(self.deckImage)
                 .resizable()
                 .frame(width: size.width - borderWidth*2, height: size.height - borderWidth*2)
                 .aspectRatio(contentMode: .fill)
