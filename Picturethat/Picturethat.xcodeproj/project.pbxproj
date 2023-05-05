@@ -18,6 +18,7 @@
 		078B618C29DC522D00BA191C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 078B618B29DC522D00BA191C /* GoogleService-Info.plist */; };
 		078B619429DC669400BA191C /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 078B619329DC669400BA191C /* FirebaseAnalytics */; };
 		078B619629DC669400BA191C /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 078B619529DC669400BA191C /* FirebaseDatabase */; };
+		07A316412A04D00C00168768 /* DeckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A316402A04D00C00168768 /* DeckView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		0747F1252A00227C00DFEE4F /* DeckSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DeckSelectionView.swift; path = PictureThat/Views/DeckSelectionView/DeckSelectionView.swift; sourceTree = SOURCE_ROOT; };
 		0747F1282A00229000DFEE4F /* CardSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CardSelectionView.swift; path = PictureThat/Views/CardSelectionView/CardSelectionView.swift; sourceTree = SOURCE_ROOT; };
 		078B618B29DC522D00BA191C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		07A316402A04D00C00168768 /* DeckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 		0747F1242A00226100DFEE4F /* DeckSelectionView */ = {
 			isa = PBXGroup;
 			children = (
+				07A3163F2A04CFF300168768 /* Helper */,
 				0747F1252A00227C00DFEE4F /* DeckSelectionView.swift */,
 			);
 			path = DeckSelectionView;
@@ -134,6 +137,14 @@
 				0747F1282A00229000DFEE4F /* CardSelectionView.swift */,
 			);
 			path = CardSelectionView;
+			sourceTree = "<group>";
+		};
+		07A3163F2A04CFF300168768 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				07A316402A04D00C00168768 /* DeckView.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,6 +228,7 @@
 				070B8DC129D8631700135BEA /* Font+.swift in Sources */,
 				0747F1232A00225B00DFEE4F /* HomeView.swift in Sources */,
 				070B8DD829D86E0400135BEA /* Color+.swift in Sources */,
+				07A316412A04D00C00168768 /* DeckView.swift in Sources */,
 				070B8DAC29D8455200135BEA /* PicturethatApp.swift in Sources */,
 				0747F1262A00227C00DFEE4F /* DeckSelectionView.swift in Sources */,
 				0747F1292A00229000DFEE4F /* CardSelectionView.swift in Sources */,
