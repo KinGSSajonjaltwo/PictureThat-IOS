@@ -10,25 +10,14 @@
 		070B8DAC29D8455200135BEA /* PicturethatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070B8DAB29D8455200135BEA /* PicturethatApp.swift */; };
 		070B8DB029D8455300135BEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 070B8DAF29D8455300135BEA /* Assets.xcassets */; };
 		070B8DB329D8455300135BEA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 070B8DB229D8455300135BEA /* Preview Assets.xcassets */; };
-		070B8DBC29D8471300135BEA /* PocaRanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070B8DBB29D8471300135BEA /* PocaRanView.swift */; };
-		070B8DBE29D8472A00135BEA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070B8DBD29D8472A00135BEA /* HomeView.swift */; };
 		070B8DC129D8631700135BEA /* Font+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070B8DC029D8631700135BEA /* Font+.swift */; };
 		070B8DD829D86E0400135BEA /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070B8DD729D86E0400135BEA /* Color+.swift */; };
-		070B8DDE29D87B0100135BEA /* NotoSansKR-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 070B8DCE29D86C3800135BEA /* NotoSansKR-Bold.otf */; };
-		070B8DDF29D87B0100135BEA /* NotoSansKR-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 070B8DCF29D86C3800135BEA /* NotoSansKR-Light.otf */; };
-		070B8DE029D87B0100135BEA /* NotoSansKR-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 070B8DD029D86C3800135BEA /* NotoSansKR-Medium.otf */; };
-		070B8DE129D87B0100135BEA /* NotoSansKR-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 070B8DD129D86C3800135BEA /* NotoSansKR-Regular.otf */; };
-		0779FCD629E1530B003BA3FB /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0779FCD529E1530B003BA3FB /* CardViewModel.swift */; };
-		078B618629DC47D900BA191C /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078B618529DC47D900BA191C /* Card.swift */; };
+		0747F1232A00225B00DFEE4F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0747F1222A00225B00DFEE4F /* HomeView.swift */; };
+		0747F1262A00227C00DFEE4F /* DeckSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0747F1252A00227C00DFEE4F /* DeckSelectionView.swift */; };
+		0747F1292A00229000DFEE4F /* CardSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0747F1282A00229000DFEE4F /* CardSelectionView.swift */; };
 		078B618C29DC522D00BA191C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 078B618B29DC522D00BA191C /* GoogleService-Info.plist */; };
-		078B619129DC5AA200BA191C /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078B619029DC5AA200BA191C /* Network.swift */; };
 		078B619429DC669400BA191C /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 078B619329DC669400BA191C /* FirebaseAnalytics */; };
 		078B619629DC669400BA191C /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 078B619529DC669400BA191C /* FirebaseDatabase */; };
-		07B091EB29DAFEFF008C8A85 /* UINavigationController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B091EA29DAFEFF008C8A85 /* UINavigationController+.swift */; };
-		07B091ED29DB0650008C8A85 /* PocaRanNavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B091EC29DB0650008C8A85 /* PocaRanNavBarView.swift */; };
-		07B091F029DB08F0008C8A85 /* PocaRanToolBarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B091EF29DB08F0008C8A85 /* PocaRanToolBarContainerView.swift */; };
-		07B091F229DBD8FC008C8A85 /* PocaRanControlBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B091F129DBD8FC008C8A85 /* PocaRanControlBarView.swift */; };
-		07B5DAB329DD32D0004E389F /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B5DAB229DD32D0004E389F /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,24 +25,13 @@
 		070B8DAB29D8455200135BEA /* PicturethatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicturethatApp.swift; sourceTree = "<group>"; };
 		070B8DAF29D8455300135BEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		070B8DB229D8455300135BEA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		070B8DBB29D8471300135BEA /* PocaRanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocaRanView.swift; sourceTree = "<group>"; };
-		070B8DBD29D8472A00135BEA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		070B8DC029D8631700135BEA /* Font+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+.swift"; sourceTree = "<group>"; };
-		070B8DCE29D86C3800135BEA /* NotoSansKR-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Bold.otf"; sourceTree = "<group>"; };
-		070B8DCF29D86C3800135BEA /* NotoSansKR-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Light.otf"; sourceTree = "<group>"; };
-		070B8DD029D86C3800135BEA /* NotoSansKR-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Medium.otf"; sourceTree = "<group>"; };
-		070B8DD129D86C3800135BEA /* NotoSansKR-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Regular.otf"; sourceTree = "<group>"; };
 		070B8DD729D86E0400135BEA /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
 		070B8DDB29D87A9D00135BEA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0779FCD529E1530B003BA3FB /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CardViewModel.swift; path = PictureThat/Model/CardViewModel.swift; sourceTree = SOURCE_ROOT; };
-		078B618529DC47D900BA191C /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		0747F1222A00225B00DFEE4F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeView.swift; path = PictureThat/Views/HomeView/HomeView.swift; sourceTree = SOURCE_ROOT; };
+		0747F1252A00227C00DFEE4F /* DeckSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DeckSelectionView.swift; path = PictureThat/Views/DeckSelectionView/DeckSelectionView.swift; sourceTree = SOURCE_ROOT; };
+		0747F1282A00229000DFEE4F /* CardSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CardSelectionView.swift; path = PictureThat/Views/CardSelectionView/CardSelectionView.swift; sourceTree = SOURCE_ROOT; };
 		078B618B29DC522D00BA191C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		078B619029DC5AA200BA191C /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
-		07B091EA29DAFEFF008C8A85 /* UINavigationController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+.swift"; sourceTree = "<group>"; };
-		07B091EC29DB0650008C8A85 /* PocaRanNavBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocaRanNavBarView.swift; sourceTree = "<group>"; };
-		07B091EF29DB08F0008C8A85 /* PocaRanToolBarContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocaRanToolBarContainerView.swift; sourceTree = "<group>"; };
-		07B091F129DBD8FC008C8A85 /* PocaRanControlBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocaRanControlBarView.swift; sourceTree = "<group>"; };
-		07B5DAB229DD32D0004E389F /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CardView.swift; path = PictureThat/PocaRanView/Helper/CardView.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +50,8 @@
 		070B8D9F29D8455200135BEA = {
 			isa = PBXGroup;
 			children = (
-				070B8DAA29D8455200135BEA /* Picturethat */,
+				070B8DAB29D8455200135BEA /* PicturethatApp.swift */,
+				070B8DAA29D8455200135BEA /* PictureThat */,
 				070B8DA929D8455200135BEA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -85,22 +64,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		070B8DAA29D8455200135BEA /* Picturethat */ = {
+		070B8DAA29D8455200135BEA /* PictureThat */ = {
 			isa = PBXGroup;
 			children = (
-				070B8DDB29D87A9D00135BEA /* Info.plist */,
-				070B8DC929D86A0900135BEA /* Fonts */,
-				070B8DAB29D8455200135BEA /* PicturethatApp.swift */,
-				079EB62529ED961D006BBC54 /* Manager */,
-				078B618429DC47CB00BA191C /* Model */,
+				0747F1182A001E9500DFEE4F /* Resources */,
 				070B8DD629D86C4800135BEA /* Extensions */,
-				070B8DBA29D846FC00135BEA /* PocaRanView */,
-				070B8DB929D846A900135BEA /* HomeView */,
-				070B8DAF29D8455300135BEA /* Assets.xcassets */,
-				078B618B29DC522D00BA191C /* GoogleService-Info.plist */,
+				0747F1212A00213A00DFEE4F /* Views */,
 				070B8DB129D8455300135BEA /* Preview Content */,
 			);
-			path = Picturethat;
+			path = PictureThat;
 			sourceTree = "<group>";
 		};
 		070B8DB129D8455300135BEA /* Preview Content */ = {
@@ -111,70 +83,57 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		070B8DB929D846A900135BEA /* HomeView */ = {
-			isa = PBXGroup;
-			children = (
-				070B8DBD29D8472A00135BEA /* HomeView.swift */,
-			);
-			path = HomeView;
-			sourceTree = "<group>";
-		};
-		070B8DBA29D846FC00135BEA /* PocaRanView */ = {
-			isa = PBXGroup;
-			children = (
-				070B8DBB29D8471300135BEA /* PocaRanView.swift */,
-				07B091EE29DB0654008C8A85 /* Helper */,
-			);
-			path = PocaRanView;
-			sourceTree = "<group>";
-		};
-		070B8DC929D86A0900135BEA /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				070B8DCE29D86C3800135BEA /* NotoSansKR-Bold.otf */,
-				070B8DCF29D86C3800135BEA /* NotoSansKR-Light.otf */,
-				070B8DD029D86C3800135BEA /* NotoSansKR-Medium.otf */,
-				070B8DD129D86C3800135BEA /* NotoSansKR-Regular.otf */,
-			);
-			path = Fonts;
-			sourceTree = "<group>";
-		};
 		070B8DD629D86C4800135BEA /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				070B8DC029D8631700135BEA /* Font+.swift */,
 				070B8DD729D86E0400135BEA /* Color+.swift */,
-				07B091EA29DAFEFF008C8A85 /* UINavigationController+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		078B618429DC47CB00BA191C /* Model */ = {
+		0747F1182A001E9500DFEE4F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				078B618529DC47D900BA191C /* Card.swift */,
-				0779FCD529E1530B003BA3FB /* CardViewModel.swift */,
+				070B8DDB29D87A9D00135BEA /* Info.plist */,
+				078B618B29DC522D00BA191C /* GoogleService-Info.plist */,
+				070B8DAF29D8455300135BEA /* Assets.xcassets */,
 			);
-			path = Model;
+			path = Resources;
 			sourceTree = "<group>";
 		};
-		079EB62529ED961D006BBC54 /* Manager */ = {
+		0747F11B2A001FAA00DFEE4F /* HomeView */ = {
 			isa = PBXGroup;
 			children = (
-				078B619029DC5AA200BA191C /* Network.swift */,
+				0747F1222A00225B00DFEE4F /* HomeView.swift */,
 			);
-			path = Manager;
+			path = HomeView;
 			sourceTree = "<group>";
 		};
-		07B091EE29DB0654008C8A85 /* Helper */ = {
+		0747F1212A00213A00DFEE4F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				07B091EC29DB0650008C8A85 /* PocaRanNavBarView.swift */,
-				07B5DAB229DD32D0004E389F /* CardView.swift */,
-				07B091F129DBD8FC008C8A85 /* PocaRanControlBarView.swift */,
-				07B091EF29DB08F0008C8A85 /* PocaRanToolBarContainerView.swift */,
+				0747F11B2A001FAA00DFEE4F /* HomeView */,
+				0747F1242A00226100DFEE4F /* DeckSelectionView */,
+				0747F1272A00228000DFEE4F /* CardSelectionView */,
 			);
-			path = Helper;
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0747F1242A00226100DFEE4F /* DeckSelectionView */ = {
+			isa = PBXGroup;
+			children = (
+				0747F1252A00227C00DFEE4F /* DeckSelectionView.swift */,
+			);
+			path = DeckSelectionView;
+			sourceTree = "<group>";
+		};
+		0747F1272A00228000DFEE4F /* CardSelectionView */ = {
+			isa = PBXGroup;
+			children = (
+				0747F1282A00229000DFEE4F /* CardSelectionView.swift */,
+			);
+			path = CardSelectionView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,10 +201,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				070B8DDE29D87B0100135BEA /* NotoSansKR-Bold.otf in Resources */,
-				070B8DDF29D87B0100135BEA /* NotoSansKR-Light.otf in Resources */,
-				070B8DE029D87B0100135BEA /* NotoSansKR-Medium.otf in Resources */,
-				070B8DE129D87B0100135BEA /* NotoSansKR-Regular.otf in Resources */,
 				070B8DB329D8455300135BEA /* Preview Assets.xcassets in Resources */,
 				070B8DB029D8455300135BEA /* Assets.xcassets in Resources */,
 				078B618C29DC522D00BA191C /* GoogleService-Info.plist in Resources */,
@@ -259,19 +214,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07B091ED29DB0650008C8A85 /* PocaRanNavBarView.swift in Sources */,
 				070B8DC129D8631700135BEA /* Font+.swift in Sources */,
-				078B619129DC5AA200BA191C /* Network.swift in Sources */,
+				0747F1232A00225B00DFEE4F /* HomeView.swift in Sources */,
 				070B8DD829D86E0400135BEA /* Color+.swift in Sources */,
-				070B8DBE29D8472A00135BEA /* HomeView.swift in Sources */,
 				070B8DAC29D8455200135BEA /* PicturethatApp.swift in Sources */,
-				0779FCD629E1530B003BA3FB /* CardViewModel.swift in Sources */,
-				070B8DBC29D8471300135BEA /* PocaRanView.swift in Sources */,
-				07B5DAB329DD32D0004E389F /* CardView.swift in Sources */,
-				07B091F029DB08F0008C8A85 /* PocaRanToolBarContainerView.swift in Sources */,
-				078B618629DC47D900BA191C /* Card.swift in Sources */,
-				07B091F229DBD8FC008C8A85 /* PocaRanControlBarView.swift in Sources */,
-				07B091EB29DAFEFF008C8A85 /* UINavigationController+.swift in Sources */,
+				0747F1262A00227C00DFEE4F /* DeckSelectionView.swift in Sources */,
+				0747F1292A00229000DFEE4F /* CardSelectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,12 +351,13 @@
 				DEVELOPMENT_TEAM = PX9ZAGMV5G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Picturethat/Info.plist;
+				INFOPLIST_FILE = Picturethat/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -433,12 +382,13 @@
 				DEVELOPMENT_TEAM = PX9ZAGMV5G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Picturethat/Info.plist;
+				INFOPLIST_FILE = Picturethat/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
