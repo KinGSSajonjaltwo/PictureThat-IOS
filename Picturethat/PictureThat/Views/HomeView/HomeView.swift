@@ -9,7 +9,17 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            VStack {
+                Text("사진그거")
+                    .padding()
+                NavigationLink(
+                    destination: DeckSelectionView(),
+                    label: {
+                        Text("포즈 카드팩 둘러보기")
+                    })
+            }
+        }
     }
 }
 
