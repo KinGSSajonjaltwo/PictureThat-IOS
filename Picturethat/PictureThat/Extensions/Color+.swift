@@ -7,6 +7,11 @@
 import SwiftUI
 
 extension Color {
+    
+    static let buttonColor = Color(hex: "FFFFFF")
+    static let buttonBorderColor = Color(hex: "4A4A4A")
+    static let buttonShadowColor = Color(hex: "000000", opacity: 0.5)
+    static let buttonTextColor = Color(hex: "4A4A4A")
 
     static let deckBorderColor = Color(hex: "FFFFFF")
     static let deckShadowColor = Color(hex: "000000", opacity: 0.5)

@@ -8,5 +8,6 @@ import SwiftUI
 
 extension Font {
     
+    static let deckButtonFont = Font.custom("AppleSDGothicNeo-Bold", size: 20)
     
 }
