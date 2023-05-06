@@ -54,6 +54,7 @@ struct DeckSelectionView: View {
                     }
                     
                 }
+                .padding(.top, 35)
                 Spacer()
 
             }
