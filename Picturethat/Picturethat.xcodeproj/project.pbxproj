@@ -15,6 +15,7 @@
 		0747F1232A00225B00DFEE4F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0747F1222A00225B00DFEE4F /* HomeView.swift */; };
 		0747F1262A00227C00DFEE4F /* DeckSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0747F1252A00227C00DFEE4F /* DeckSelectionView.swift */; };
 		0747F1292A00229000DFEE4F /* CardSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0747F1282A00229000DFEE4F /* CardSelectionView.swift */; };
+		074C68262A065B9F0039845E /* NavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074C68252A065B9F0039845E /* NavBarView.swift */; };
 		078B618C29DC522D00BA191C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 078B618B29DC522D00BA191C /* GoogleService-Info.plist */; };
 		078B619429DC669400BA191C /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 078B619329DC669400BA191C /* FirebaseAnalytics */; };
 		078B619629DC669400BA191C /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 078B619529DC669400BA191C /* FirebaseDatabase */; };
@@ -34,6 +35,7 @@
 		0747F1222A00225B00DFEE4F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeView.swift; path = PictureThat/Views/HomeView/HomeView.swift; sourceTree = SOURCE_ROOT; };
 		0747F1252A00227C00DFEE4F /* DeckSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DeckSelectionView.swift; path = PictureThat/Views/DeckSelectionView/DeckSelectionView.swift; sourceTree = SOURCE_ROOT; };
 		0747F1282A00229000DFEE4F /* CardSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CardSelectionView.swift; path = PictureThat/Views/CardSelectionView/CardSelectionView.swift; sourceTree = SOURCE_ROOT; };
+		074C68252A065B9F0039845E /* NavBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarView.swift; sourceTree = "<group>"; };
 		078B618B29DC522D00BA191C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		07A316402A04D00C00168768 /* DeckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckView.swift; sourceTree = "<group>"; };
 		07A316422A04DD6200168768 /* DeckListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckListView.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 		0747F1212A00213A00DFEE4F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				074C68242A065B830039845E /* Helper */,
 				0747F11B2A001FAA00DFEE4F /* HomeView */,
 				0747F1242A00226100DFEE4F /* DeckSelectionView */,
 				0747F1272A00228000DFEE4F /* CardSelectionView */,
@@ -142,6 +145,14 @@
 				0747F1282A00229000DFEE4F /* CardSelectionView.swift */,
 			);
 			path = CardSelectionView;
+			sourceTree = "<group>";
+		};
+		074C68242A065B830039845E /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				074C68252A065B9F0039845E /* NavBarView.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		07A3163F2A04CFF300168768 /* Helper */ = {
@@ -247,6 +258,7 @@
 				07A316412A04D00C00168768 /* DeckView.swift in Sources */,
 				070B8DAC29D8455200135BEA /* PicturethatApp.swift in Sources */,
 				0747F1262A00227C00DFEE4F /* DeckSelectionView.swift in Sources */,
+				074C68262A065B9F0039845E /* NavBarView.swift in Sources */,
 				0747F1292A00229000DFEE4F /* CardSelectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

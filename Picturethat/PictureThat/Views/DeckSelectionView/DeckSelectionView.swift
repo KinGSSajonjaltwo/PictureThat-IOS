@@ -18,7 +18,10 @@ struct DeckSelectionView: View {
                 .resizable()
                 .ignoresSafeArea()
             
-            VStack{
+            VStack(spacing: 0){
+                
+                NavBarView(navBarTitle: "포즈 카드팩 둘러보기")
+                
                 DeckListView(index: $currentIndex, items: decks) { deck in
                     GeometryReader { geo in
                         
@@ -56,6 +59,7 @@ struct DeckSelectionView: View {
             }
             
         }
+        .navigationBarBackButtonHidden(true)
         .onAppear{
             Task{
                 for _ in 1...3{
