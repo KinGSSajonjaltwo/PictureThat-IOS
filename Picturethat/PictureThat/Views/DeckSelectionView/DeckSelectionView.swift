@@ -23,14 +23,17 @@ struct DeckSelectionView: View {
                     
                     NavBarView(navBarTitle: "포즈 카드팩 둘러보기")
                     
-                    DeckListView(index: $currentIndex, items: decks) { deck in
-                        
-                        DeckView(deck: deck)
-                        
+                    Group{
+                        DeckListView(index: $currentIndex, items: decks) { deck in
+                            
+                            DeckView(deck: deck)
+                            
+                        }
+                        .frame(height: (geo.size.width - 100)/3*4)
                     }
-                    .frame(height: (geo.size.width - 100)/3*4)
-                    .padding(.vertical, 70)
+                    .frame(height: geo.size.height*2/3)
                     
+                    Spacer()
                     
                     Button {
                         print("\(currentIndex)")
@@ -55,8 +58,8 @@ struct DeckSelectionView: View {
                         
                     }
                     
-                    
                     Spacer()
+                    
                     
                 }
             }
