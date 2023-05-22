@@ -18,46 +18,49 @@ struct DeckSelectionView: View {
                 .resizable()
                 .ignoresSafeArea()
             
-            VStack(spacing: 0){
-                
-                NavBarView(navBarTitle: "포즈 카드팩 둘러보기")
-                
-                DeckListView(index: $currentIndex, items: decks) { deck in
-                    GeometryReader { geo in
+            GeometryReader { geo in
+                VStack(spacing: 0){
+                    
+                    NavBarView(navBarTitle: "포즈 카드팩 둘러보기")
+                    
+                    DeckListView(index: $currentIndex, items: decks) { deck in
                         
-                        DeckView(width: geo.size.width, deck: deck)
+                        DeckView(deck: deck)
                         
                     }
-                }
-                .frame(height: 400)
-                .padding(.top, 100)
-                
-                Button {
-                    print("\(currentIndex)")
-                } label: {
+                    .frame(height: (geo.size.width - 100)/3*4)
+                    .padding(.vertical, 70)
                     
-                    ZStack {
+                    
+                    Button {
+                        print("\(currentIndex)")
+                    } label: {
                         
-                        RoundedRectangle(cornerRadius: 30)
-                            .fill(Color.buttonBorderColor)
-                            .frame(width: 200, height: 55)
-                            .shadow(color: Color.buttonShadowColor, radius: 2, x: 0, y: 2)
-                        
-                        RoundedRectangle(cornerRadius: 30)
-                            .fill(Color.white)
-                            .frame(width: 198, height: 53)
-
-                        Text("팩 뜯기")
-                            .font(.deckButtonFont)
-                            .foregroundColor(.buttonTextColor)
+                        ZStack {
+                            
+                            RoundedRectangle(cornerRadius: 30)
+                                .fill(Color.buttonBorderColor)
+                                .frame(width: 200, height: 55)
+                                .shadow(color: Color.buttonShadowColor, radius: 2, x: 0, y: 2)
+                            
+                            RoundedRectangle(cornerRadius: 30)
+                                .fill(Color.white)
+                                .frame(width: 198, height: 53)
+                            
+                            Text("팩 뜯기")
+                                .font(.deckButtonFont)
+                                .foregroundColor(.buttonTextColor)
+                            
+                        }
                         
                     }
                     
+                    
+                    Spacer()
+                    
                 }
-                .padding(.top, 35)
-                Spacer()
-
             }
+            
             
         }
         .navigationBarBackButtonHidden(true)
