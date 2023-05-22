@@ -97,7 +97,7 @@ struct HomeView: View {
             }
             
         }
-        .navigationViewStyle(.stack)
+        .navigationViewStyle(.automatic)
 
     }
 }
