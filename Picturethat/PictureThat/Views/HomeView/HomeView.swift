@@ -31,11 +31,13 @@ struct HomeView: View {
                     ZStack{
                         
                         ZStack{
-                            DeckView(width: 171.75,height: 229)
+                            DeckView()
+                                .frame(width: 171.75, height: 229)
                                 .rotationEffect(.degrees(-10))
                                 .offset(x:-60)
                             
-                            DeckView(width: 182.2,height: 243, deck: Deck(deckImage: "img_downloadThumbnail"))
+                            DeckView(deck: Deck(deckImage: "img_downloadThumbnail"))
+                                .frame(width: 182.2,height: 243)
                                 .rotationEffect(.degrees(10))
                                 .offset(x: 60, y: 20)
                         }
