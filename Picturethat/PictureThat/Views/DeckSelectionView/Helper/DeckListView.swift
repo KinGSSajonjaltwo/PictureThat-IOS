@@ -32,18 +32,24 @@ struct DeckListView<Content: View, T: Identifiable>: View {
     var body: some View {
         GeometryReader { geo in
             
-            let width = geo.size.width - (trailingSpace - spacing)
+            
+            let deckWidth = geo.size.width - trailingSpace
+            let deckHeigth = (geo.size.width - trailingSpace)/3*4
+            
+            let scrollWidth = deckWidth + spacing
             let adjustMentWidth = (trailingSpace / 2) - spacing
             
             HStack(spacing: spacing) {
                 ForEach(list){ item in
+
                     content(item)
-                        .frame(width: geo.size.width - trailingSpace)
+                        .frame(width: deckWidth, height: deckHeigth)
                     
                 }
             }
+            .frame(height: deckHeigth)
             .padding(.horizontal, spacing)
-            .offset(x: (CGFloat(currentIndex) * -width) + (currentIndex != 0 ? adjustMentWidth : 0) + offset)
+            .offset(x: (CGFloat(currentIndex) * -scrollWidth) + adjustMentWidth + offset)
             .gesture(
                 DragGesture()
                     .updating($offset, body: { value, out, _ in
@@ -55,7 +61,7 @@ struct DeckListView<Content: View, T: Identifiable>: View {
                         
                         let offsetX = value.translation.width
                         
-                        let progress = -offsetX/width
+                        let progress = -offsetX/scrollWidth
                         let roundIndex = progress.rounded()
                         
                         currentIndex = max(min(currentIndex + Int(roundIndex), list.count - 1), 0)
@@ -67,7 +73,7 @@ struct DeckListView<Content: View, T: Identifiable>: View {
                         
                         let offsetX = value.translation.width
                         
-                        let progress = -offsetX/width
+                        let progress = -offsetX/scrollWidth
                         let roundIndex = progress.rounded()
                         
                         index = max(min(currentIndex + Int(roundIndex), list.count - 1), 0)
