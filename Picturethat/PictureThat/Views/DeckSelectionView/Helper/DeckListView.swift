@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DeckListView<Content: View, T: Identifiable>: View {
     var content: (T) -> Content
-    var list: [T]
+    @Binding var list: [T]
     
     var spacing: CGFloat
     var trailingSpace: CGFloat
@@ -18,9 +18,9 @@ struct DeckListView<Content: View, T: Identifiable>: View {
     @GestureState var offset: CGFloat = 0
     @State var currentIndex = 0
     
-    init(index: Binding<Int>, items: [T], spacing: CGFloat = 15, trailingSpace: CGFloat = 100, content: @escaping (T)->Content) {
+    init(index: Binding<Int>, items: Binding<[T]>, spacing: CGFloat = 15, trailingSpace: CGFloat = 100, content: @escaping (T)->Content) {
         
-        self.list = items
+        self._list = items
         self.spacing = spacing
         self.trailingSpace = trailingSpace
         self._index = index
