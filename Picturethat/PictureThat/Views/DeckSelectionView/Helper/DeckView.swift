@@ -12,7 +12,7 @@ struct DeckView: View {
     let cornerRadius: CGFloat = 15
     let borderWidth: CGFloat = 4
     
-    init(deck: Deck = Deck(deckImage: "img_heartDeckThumbnail")) {
+    init(deck: Deck) {
         self.deck = deck
     }
     
@@ -26,7 +26,7 @@ struct DeckView: View {
                     .frame(width: geo.size.width, height: geo.size.height)
                     .shadow(color: Color.deckShadowColor, radius: 2, x: 0, y: 2)
                 
-                Image(self.deck.deckImage)
+                Image(self.deck.imageURL)
                     .resizable()
                     .frame(width: geo.size.width - borderWidth*2, height: geo.size.height - borderWidth*2)
                     .aspectRatio(contentMode: .fill)
@@ -40,7 +40,7 @@ struct DeckView: View {
 
 struct DeckView_Previews: PreviewProvider {
     static var previews: some View {
-        DeckView()
+        DeckView(deck: Deck.sampleDeck1)
             .frame(width: 300, height: 400)
     }
 }

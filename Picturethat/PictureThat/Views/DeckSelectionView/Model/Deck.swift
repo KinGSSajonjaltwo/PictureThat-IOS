@@ -7,9 +7,15 @@
 
 import SwiftUI
 
-struct Deck: Identifiable{
+struct Deck: Identifiable, Codable{
     
-    var id = UUID().uuidString
-    var deckImage: String
+    var id: String
+    var title: String
+    var imageURL: String
     
+}
+
+extension Deck{
+    static var sampleDeck1: Deck = Deck(id: "SampleDeck1", title: "SampleDeckName", imageURL: "img_heartDeckThumbnail")
+    static var sampleDeck2: Deck = Deck(id: "SampleDeck2", title: "SampleDeckName", imageURL: "img_downloadThumbnail")
 }

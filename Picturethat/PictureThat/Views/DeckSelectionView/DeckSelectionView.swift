@@ -11,6 +11,8 @@ struct DeckSelectionView: View {
     @State var currentIndex: Int = 0
     @State var decks: [Deck] = []
     
+    @StateObject var deckViewModel: DeckViewModel = DeckViewModel()
+    
     var body: some View {
         
         ZStack{
@@ -24,7 +26,7 @@ struct DeckSelectionView: View {
                     NavBarView(navBarTitle: "포즈 카드팩 둘러보기")
                     
                     Group{
-                        DeckListView(index: $currentIndex, items: decks) { deck in
+                        DeckListView(index: $currentIndex, items: $deckViewModel.decks) { deck in
                             
                             DeckView(deck: deck)
                             
@@ -69,10 +71,7 @@ struct DeckSelectionView: View {
         .navigationBarBackButtonHidden(true)
         .onAppear{
             Task{
-                for _ in 1...3{
-                    decks.append(Deck(deckImage: "img_heartDeckThumbnail"))
-                }
-                decks.append(Deck(deckImage: "img_downloadThumbnail"))
+                deckViewModel.fetchDecks()
             }
         }
     }
