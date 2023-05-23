@@ -70,9 +70,9 @@ struct DeckSelectionView: View {
         .onAppear{
             Task{
                 for _ in 1...3{
-                    decks.append(Deck(deckImage: "img_heartDeckThumbnail"))
+                    decks.append(Deck.sampleDeck1)
                 }
-                decks.append(Deck(deckImage: "img_downloadThumbnail"))
+                decks.append(Deck.sampleDeck2)
             }
         }
     }
