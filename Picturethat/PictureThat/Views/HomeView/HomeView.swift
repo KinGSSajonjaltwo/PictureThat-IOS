@@ -31,12 +31,12 @@ struct HomeView: View {
                     ZStack{
                         
                         ZStack{
-                            DeckView(deck: Deck.sampleDeck1)
+                            HomeDeckView.Sample1
                                 .frame(width: 171.75, height: 229)
                                 .rotationEffect(.degrees(-10))
                                 .offset(x:-60)
                             
-                            DeckView(deck: Deck.sampleDeck2)
+                            HomeDeckView.Sample2
                                 .frame(width: 182.2,height: 243)
                                 .rotationEffect(.degrees(10))
                                 .offset(x: 60, y: 20)
