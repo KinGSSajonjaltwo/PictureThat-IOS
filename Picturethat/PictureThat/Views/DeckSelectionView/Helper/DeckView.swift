@@ -26,11 +26,17 @@ struct DeckView: View {
                     .frame(width: geo.size.width, height: geo.size.height)
                     .shadow(color: Color.deckShadowColor, radius: 2, x: 0, y: 2)
                 
-                Image(self.deck.imageURL)
-                    .resizable()
-                    .frame(width: geo.size.width - borderWidth*2, height: geo.size.height - borderWidth*2)
-                    .aspectRatio(contentMode: .fill)
-                    .clipShape(RoundedRectangle(cornerRadius: self.cornerRadius))
+                
+                AsyncImage(url: URL(string: self.deck.imageURL)) { image in
+                    image.resizable()
+                        .aspectRatio(contentMode: .fill)
+                } placeholder: {
+                    ProgressView()
+                }
+                .frame(width: geo.size.width - borderWidth*2, height: geo.size.height - borderWidth*2)
+                .clipShape(RoundedRectangle(cornerRadius: self.cornerRadius))
+
+                
                 
             }
         }
@@ -44,3 +50,4 @@ struct DeckView_Previews: PreviewProvider {
             .frame(width: 300, height: 400)
     }
 }
+
