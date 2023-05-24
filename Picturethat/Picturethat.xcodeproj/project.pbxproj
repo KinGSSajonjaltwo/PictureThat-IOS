@@ -14,6 +14,7 @@
 		070B8DD829D86E0400135BEA /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070B8DD729D86E0400135BEA /* Color+.swift */; };
 		072BCE172A1C4958004B3799 /* DeckViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072BCE162A1C4958004B3799 /* DeckViewModel.swift */; };
 		072BCE1A2A1C4977004B3799 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 072BCE192A1C4977004B3799 /* FirebaseFirestore */; };
+		072BCE1D2A1DAFEB004B3799 /* HomeDeckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072BCE1C2A1DAFEB004B3799 /* HomeDeckView.swift */; };
 		0747F1232A00225B00DFEE4F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0747F1222A00225B00DFEE4F /* HomeView.swift */; };
 		0747F1262A00227C00DFEE4F /* DeckSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0747F1252A00227C00DFEE4F /* DeckSelectionView.swift */; };
 		0747F1292A00229000DFEE4F /* CardSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0747F1282A00229000DFEE4F /* CardSelectionView.swift */; };
@@ -34,6 +35,7 @@
 		070B8DD729D86E0400135BEA /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
 		070B8DDB29D87A9D00135BEA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		072BCE162A1C4958004B3799 /* DeckViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckViewModel.swift; sourceTree = "<group>"; };
+		072BCE1C2A1DAFEB004B3799 /* HomeDeckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDeckView.swift; sourceTree = "<group>"; };
 		0747F1222A00225B00DFEE4F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeView.swift; path = PictureThat/Views/HomeView/HomeView.swift; sourceTree = SOURCE_ROOT; };
 		0747F1252A00227C00DFEE4F /* DeckSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DeckSelectionView.swift; path = PictureThat/Views/DeckSelectionView/DeckSelectionView.swift; sourceTree = SOURCE_ROOT; };
 		0747F1282A00229000DFEE4F /* CardSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CardSelectionView.swift; path = PictureThat/Views/CardSelectionView/CardSelectionView.swift; sourceTree = SOURCE_ROOT; };
@@ -119,6 +121,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		072BCE1B2A1DAFD0004B3799 /* Helpter */ = {
+			isa = PBXGroup;
+			children = (
+				072BCE1C2A1DAFEB004B3799 /* HomeDeckView.swift */,
+			);
+			path = Helpter;
+			sourceTree = "<group>";
+		};
 		0747F1182A001E9500DFEE4F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +142,7 @@
 		0747F11B2A001FAA00DFEE4F /* HomeView */ = {
 			isa = PBXGroup;
 			children = (
+				072BCE1B2A1DAFD0004B3799 /* Helpter */,
 				0747F1222A00225B00DFEE4F /* HomeView.swift */,
 			);
 			path = HomeView;
@@ -273,6 +284,7 @@
 				070B8DC129D8631700135BEA /* Font+.swift in Sources */,
 				0747F1232A00225B00DFEE4F /* HomeView.swift in Sources */,
 				070B8DD829D86E0400135BEA /* Color+.swift in Sources */,
+				072BCE1D2A1DAFEB004B3799 /* HomeDeckView.swift in Sources */,
 				07A316432A04DD6200168768 /* DeckListView.swift in Sources */,
 				07A316412A04D00C00168768 /* DeckView.swift in Sources */,
 				070B8DAC29D8455200135BEA /* PicturethatApp.swift in Sources */,
