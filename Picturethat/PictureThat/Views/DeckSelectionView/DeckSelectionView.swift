@@ -9,9 +9,10 @@ import SwiftUI
 
 struct DeckSelectionView: View {
     @State var currentIndex: Int = 0
-    @State var decks: [Deck] = []
     
     @StateObject var deckViewModel: DeckViewModel = DeckViewModel()
+    
+    @State private var isPresented = false
     
     var body: some View {
         
@@ -39,6 +40,7 @@ struct DeckSelectionView: View {
                     
                     Button {
                         print("\(currentIndex)")
+                        isPresented = true
                     } label: {
                         
                         ZStack {
@@ -58,6 +60,9 @@ struct DeckSelectionView: View {
                             
                         }
                         
+                    }
+                    .sheet(isPresented: $isPresented) {
+                        CardSelectionView(deck: self.deckViewModel.decks[currentIndex])
                     }
                     
                     Spacer()
