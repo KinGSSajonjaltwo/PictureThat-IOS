@@ -11,5 +11,9 @@ extension Font {
     static let navBarText = Font.custom("AppleSDGothicNeo-Regular", size: 24)
     
     static let deckButtonFont = Font.custom("AppleSDGothicNeo-Bold", size: 20)
+    
+    static let cardSourceFont = Font.custom("AppleSDGothicNeo-Thin", size: 15)
+    
+    static let cardTitleFont = Font.custom("AppleSDGothicNeo-Bold", size: 24)
 
 }

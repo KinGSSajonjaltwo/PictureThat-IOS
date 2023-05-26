@@ -18,6 +18,8 @@ extension Color {
     static let deckBorderColor = Color(hex: "FFFFFF")
     static let deckShadowColor = Color(hex: "000000", opacity: 0.5)
     
+    static let cardSourceColor = Color(hex: "FFFFFF", opacity: 0.5)
+    static let cardTitleColor = Color(hex: "4A4A4A")
 }
 
 
