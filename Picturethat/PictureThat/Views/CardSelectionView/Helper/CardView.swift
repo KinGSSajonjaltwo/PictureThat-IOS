@@ -31,34 +31,18 @@ struct CardView: View {
                 //Card Image with source
                 ZStack {
                     
-                    if let url = URL(string: self.card.imageURL){
-                        
-                        URLImage(url) {
-                            RoundedRectangle(cornerRadius: self.cornerRadius)
-                                .frame(width: 249, height: 332)
-                        } inProgress: { progress in
-                            ZStack{
-                                RoundedRectangle(cornerRadius: self.cornerRadius)
-                                    .foregroundColor(Color.cardImageLoadingColor)
-                                    .frame(width: 249, height: 332)
-                                ProgressView()
-                            }
-                        } failure: { error, retry in
-                            // Display error and retry button
-                            VStack {
-                                Text(error.localizedDescription)
-                                Button("Retry", action: retry)
-                            }
-                        } content: { image in
-                            image
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                        }
-                        
+                    if let image = card.image{
+                        Image(uiImage: image)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
                     }else{
-                        Text("wrong imageURL")
+                        ZStack{
+                            RoundedRectangle(cornerRadius: self.cornerRadius)
+                                .foregroundColor(Color.cardImageLoadingColor)
+                                .frame(width: 249, height: 332)
+                            ProgressView()
+                        }
                     }
-                    
 
                     
                     VStack{
