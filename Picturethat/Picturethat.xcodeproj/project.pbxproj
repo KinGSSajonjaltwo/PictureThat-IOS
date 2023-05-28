@@ -21,6 +21,7 @@
 		0747F1232A00225B00DFEE4F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0747F1222A00225B00DFEE4F /* HomeView.swift */; };
 		0747F1262A00227C00DFEE4F /* DeckSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0747F1252A00227C00DFEE4F /* DeckSelectionView.swift */; };
 		074C68262A065B9F0039845E /* NavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074C68252A065B9F0039845E /* NavBarView.swift */; };
+		074EBDFE2A23712E0031C18C /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 074EBDFD2A23712E0031C18C /* URLImage */; };
 		078831A42A1F43240089B4A1 /* CardsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078831A32A1F43240089B4A1 /* CardsViewModel.swift */; };
 		078831A82A1F7FD80089B4A1 /* CardSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078831A72A1F7FD80089B4A1 /* CardSelectionView.swift */; };
 		078B618C29DC522D00BA191C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 078B618B29DC522D00BA191C /* GoogleService-Info.plist */; };
@@ -60,6 +61,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				078B619429DC669400BA191C /* FirebaseAnalytics in Frameworks */,
+				074EBDFE2A23712E0031C18C /* URLImage in Frameworks */,
 				072BCE1A2A1C4977004B3799 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -249,6 +251,7 @@
 			packageProductDependencies = (
 				078B619329DC669400BA191C /* FirebaseAnalytics */,
 				072BCE192A1C4977004B3799 /* FirebaseFirestore */,
+				074EBDFD2A23712E0031C18C /* URLImage */,
 			);
 			productName = Picturethat;
 			productReference = 070B8DA829D8455200135BEA /* Picturethat.app */;
@@ -280,6 +283,7 @@
 			mainGroup = 070B8D9F29D8455200135BEA;
 			packageReferences = (
 				078B619229DC669400BA191C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				074EBDFC2A23712E0031C18C /* XCRemoteSwiftPackageReference "url-image" */,
 			);
 			productRefGroup = 070B8DA929D8455200135BEA /* Products */;
 			projectDirPath = "";
@@ -530,6 +534,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		074EBDFC2A23712E0031C18C /* XCRemoteSwiftPackageReference "url-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmytro-anokhin/url-image.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 		078B619229DC669400BA191C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -545,6 +557,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 078B619229DC669400BA191C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
+		};
+		074EBDFD2A23712E0031C18C /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 074EBDFC2A23712E0031C18C /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
 		};
 		078B619329DC669400BA191C /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
