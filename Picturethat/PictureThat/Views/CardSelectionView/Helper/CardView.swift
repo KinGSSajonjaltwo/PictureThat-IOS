@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import URLImage
 
 struct CardView: View {
     var card: Card
@@ -30,12 +31,35 @@ struct CardView: View {
                 //Card Image with source
                 ZStack {
                     
-                    AsyncImage(url: URL(string: self.card.imageURL)) { image in
-                        image.resizable()
-                            .aspectRatio(contentMode: .fill)
-                    } placeholder: {
-                        ProgressView()
+                    if let url = URL(string: self.card.imageURL){
+                        
+                        URLImage(url) {
+                            RoundedRectangle(cornerRadius: self.cornerRadius)
+                                .frame(width: 249, height: 332)
+                        } inProgress: { progress in
+                            ZStack{
+                                RoundedRectangle(cornerRadius: self.cornerRadius)
+                                    .foregroundColor(Color.cardImageLoadingColor)
+                                    .frame(width: 249, height: 332)
+                                ProgressView()
+                            }
+                        } failure: { error, retry in
+                            // Display error and retry button
+                            VStack {
+                                Text(error.localizedDescription)
+                                Button("Retry", action: retry)
+                            }
+                        } content: { image in
+                            image
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                        }
+                        
+                    }else{
+                        Text("wrong imageURL")
                     }
+                    
+
                     
                     VStack{
                         Spacer()
