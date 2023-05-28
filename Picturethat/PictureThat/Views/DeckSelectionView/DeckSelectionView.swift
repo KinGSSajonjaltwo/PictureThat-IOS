@@ -21,10 +21,45 @@ struct DeckSelectionView: View {
                 .resizable()
                 .ignoresSafeArea()
             
+            VStack{
+                NavBarView(navBarTitle: "포즈 카드팩 둘러보기")
+                Spacer()
+                Button {
+                    print("\(currentIndex)")
+                    isPresented = true
+                } label: {
+                    
+                    ZStack {
+                        
+                        RoundedRectangle(cornerRadius: 30)
+                            .fill(Color.buttonBorderColor)
+                            .frame(width: 200, height: 55)
+                            .shadow(color: Color.buttonShadowColor, radius: 2, x: 0, y: 2)
+                        
+                        RoundedRectangle(cornerRadius: 30)
+                            .fill(Color.white)
+                            .frame(width: 198, height: 53)
+                        
+                        Text("팩 뜯기")
+                            .font(.deckButtonFont)
+                            .foregroundColor(.buttonTextColor)
+                        
+                    }
+                    .padding(.bottom, 70)
+                    
+                }
+                .sheet(isPresented: $isPresented) {
+                    CardSelectionView(deck: self.deckViewModel.decks[currentIndex])
+                }
+            }
+            
+            
+            
             GeometryReader { geo in
                 VStack(spacing: 0){
                     
-                    NavBarView(navBarTitle: "포즈 카드팩 둘러보기")
+                    Spacer()
+                    Spacer()
                     
                     Group{
                         DeckListView(index: $currentIndex, items: $deckViewModel.decks) { deck in
@@ -37,35 +72,9 @@ struct DeckSelectionView: View {
                     .frame(height: geo.size.height*2/3)
                     
                     Spacer()
-                    
-                    Button {
-                        print("\(currentIndex)")
-                        isPresented = true
-                    } label: {
-                        
-                        ZStack {
-                            
-                            RoundedRectangle(cornerRadius: 30)
-                                .fill(Color.buttonBorderColor)
-                                .frame(width: 200, height: 55)
-                                .shadow(color: Color.buttonShadowColor, radius: 2, x: 0, y: 2)
-                            
-                            RoundedRectangle(cornerRadius: 30)
-                                .fill(Color.white)
-                                .frame(width: 198, height: 53)
-                            
-                            Text("팩 뜯기")
-                                .font(.deckButtonFont)
-                                .foregroundColor(.buttonTextColor)
-                            
-                        }
-                        
-                    }
-                    .sheet(isPresented: $isPresented) {
-                        CardSelectionView(deck: self.deckViewModel.decks[currentIndex])
-                    }
-                    
                     Spacer()
+                    Spacer()
+                    
                     
                     
                 }
