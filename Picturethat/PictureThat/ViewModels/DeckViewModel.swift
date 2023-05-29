@@ -10,6 +10,7 @@ import FirebaseFirestore
 
 class DeckViewModel: ObservableObject {
     @Published var decks: [Deck] = []
+    @Published var loadingDecks: Set<String> = []
     
     private let firestore = Firestore.firestore()
     private let decksCollection = "decks"
@@ -29,6 +30,27 @@ class DeckViewModel: ObservableObject {
                 
                 return Deck(id: id, title: title, imageURL: imageURL)
             }
+            
+            for deck in self.decks{
+                if let imageURL = URL(string: deck.imageURL) {
+                    self.loadingDecks.insert(deck.id)
+                    
+                    ImageLoader.loadImage(from: imageURL) { image in
+                        if let image = image {
+                            DispatchQueue.main.async {
+                                if let index = self.decks.firstIndex(where: { $0.id == deck.id }) {
+                                    self.decks[index].image = image
+                                }
+                            }
+                        }
+                        
+                        DispatchQueue.main.async {
+                            self.loadingDecks.remove(deck.id)
+                        }
+                    }
+                }
+            }
+            
         }
     }
 }
