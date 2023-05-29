@@ -35,6 +35,8 @@ struct CardView: View {
                         Image(uiImage: image)
                             .resizable()
                             .aspectRatio(contentMode: .fit)
+                            .frame(width: 249, height: 332)
+                            .clipShape(RoundedRectangle(cornerRadius: self.cornerRadius))
                     }else{
                         ZStack{
                             RoundedRectangle(cornerRadius: self.cornerRadius)
@@ -54,7 +56,6 @@ struct CardView: View {
                     
                 }
                 .frame(width: 249, height: 332)
-                .clipShape(RoundedRectangle(cornerRadius: self.cornerRadius))
                 .padding(.top, 17)
                 
                 

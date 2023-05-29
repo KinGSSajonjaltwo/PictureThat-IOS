@@ -10,7 +10,7 @@ import FirebaseFirestore
 
 class CardsViewModel: ObservableObject {
     @Published var cards: [Card] = []
-    @Published var loadingImages: Set<String> = []
+    @Published var loadingCards: Set<String> = []
     
     private let firestore = Firestore.firestore()
     private let cardsCollection = "cards"
@@ -40,7 +40,7 @@ class CardsViewModel: ObservableObject {
                 // 이미지 로딩
                 for card in self.cards {
                     if let imageURL = URL(string: card.imageURL) {
-                        self.loadingImages.insert(card.id)
+                        self.loadingCards.insert(card.id)
                         
                         ImageLoader.loadImage(from: imageURL) { image in
                             if let image = image {
@@ -52,7 +52,7 @@ class CardsViewModel: ObservableObject {
                             }
                             
                             DispatchQueue.main.async {
-                                self.loadingImages.remove(card.id)
+                                self.loadingCards.remove(card.id)
                             }
                         }
                     }
