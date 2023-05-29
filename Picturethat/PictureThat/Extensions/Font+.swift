@@ -12,7 +12,7 @@ extension Font {
     
     static let deckButtonFont = Font.custom("AppleSDGothicNeo-Bold", size: 20)
     
-    static let cardSourceFont = Font.custom("AppleSDGothicNeo-Thin", size: 15)
+    static let cardSourceFont = Font.custom("AppleSDGothicNeo-Light", size: 15)
     
     static let cardTitleFont = Font.custom("AppleSDGothicNeo-Bold", size: 24)
 
