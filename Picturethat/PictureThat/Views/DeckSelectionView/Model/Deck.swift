@@ -7,11 +7,12 @@
 
 import SwiftUI
 
-struct Deck: Identifiable, Codable{
+struct Deck: Identifiable{
     
     var id: String
     var title: String
     var imageURL: String
+    var image: UIImage?
     
 }
 

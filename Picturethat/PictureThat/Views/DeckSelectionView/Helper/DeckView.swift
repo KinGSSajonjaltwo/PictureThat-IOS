@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import URLImage
 
 struct DeckView: View {
     var deck: Deck
@@ -27,15 +28,20 @@ struct DeckView: View {
                     .shadow(color: Color.deckShadowColor, radius: 2, x: 0, y: 2)
                 
                 
-                AsyncImage(url: URL(string: self.deck.imageURL)) { image in
-                    image.resizable()
-                        .aspectRatio(contentMode: .fill)
-                } placeholder: {
-                    ProgressView()
+                if let image = deck.image{
+                    Image(uiImage: image)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: geo.size.width - borderWidth*2, height: geo.size.height - borderWidth*2)
+                        .clipShape(RoundedRectangle(cornerRadius: self.cornerRadius))
+                }else{
+                    ZStack{
+                        RoundedRectangle(cornerRadius: self.cornerRadius)
+                            .foregroundColor(Color.cardImageLoadingColor)
+                            .frame(width: geo.size.width - borderWidth*2, height: geo.size.height - borderWidth*2)
+                        ProgressView()
+                    }
                 }
-                .frame(width: geo.size.width - borderWidth*2, height: geo.size.height - borderWidth*2)
-                .clipShape(RoundedRectangle(cornerRadius: self.cornerRadius))
-
                 
                 
             }

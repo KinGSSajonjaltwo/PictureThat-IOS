@@ -7,13 +7,14 @@
 
 import SwiftUI
 
-struct Card: Identifiable, Codable{
+struct Card: Identifiable{
     
     var deckID: String
     var id: String
     var title: String
     var imageURL: String
     var source: String
+    var image: UIImage?
     
 }
 

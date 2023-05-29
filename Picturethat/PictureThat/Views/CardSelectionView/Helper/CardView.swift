@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import URLImage
 
 struct CardView: View {
     var card: Card
@@ -30,12 +31,21 @@ struct CardView: View {
                 //Card Image with source
                 ZStack {
                     
-                    AsyncImage(url: URL(string: self.card.imageURL)) { image in
-                        image.resizable()
-                            .aspectRatio(contentMode: .fill)
-                    } placeholder: {
-                        ProgressView()
+                    if let image = card.image{
+                        Image(uiImage: image)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 249, height: 332)
+                            .clipShape(RoundedRectangle(cornerRadius: self.cornerRadius))
+                    }else{
+                        ZStack{
+                            RoundedRectangle(cornerRadius: self.cornerRadius)
+                                .foregroundColor(Color.cardImageLoadingColor)
+                                .frame(width: 249, height: 332)
+                            ProgressView()
+                        }
                     }
+
                     
                     VStack{
                         Spacer()
@@ -46,7 +56,6 @@ struct CardView: View {
                     
                 }
                 .frame(width: 249, height: 332)
-                .clipShape(RoundedRectangle(cornerRadius: self.cornerRadius))
                 .padding(.top, 17)
                 
                 

@@ -20,6 +20,8 @@ extension Color {
     
     static let cardSourceColor = Color(hex: "FFFFFF", opacity: 0.5)
     static let cardTitleColor = Color(hex: "4A4A4A")
+    
+    static let cardImageLoadingColor = Color(hex: "D9D9D9")
 }
 
 
