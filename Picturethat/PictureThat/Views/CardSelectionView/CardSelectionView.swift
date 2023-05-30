@@ -10,7 +10,23 @@ import SwiftUI
 struct CardSelectionView: View {
     var deck: Deck
     var body: some View {
-        CardListView(deck: self.deck)
+        
+        ZStack{
+            SparkleView()
+                .ignoresSafeArea()
+            
+            VStack{
+                Capsule()
+                    .fill(Color.secondary)
+                    .frame(width: 40, height: 5)
+                    .opacity(0.5)
+                    .padding(10)
+                Spacer()
+            }
+            
+            CardListView(deck: self.deck)
+            
+        }
     }
 }
 
