@@ -85,7 +85,8 @@ struct DeckSelectionView: View {
         .navigationBarBackButtonHidden(true)
         .onAppear{
             Task{
-                deckViewModel.fetchDecks()
+                await deckViewModel.fetchDecks()
+                deckViewModel.loadImages()
             }
         }
     }
