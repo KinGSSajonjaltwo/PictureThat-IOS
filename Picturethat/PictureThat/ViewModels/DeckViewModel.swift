@@ -22,13 +22,15 @@ class DeckViewModel: ObservableObject {
             return
         }
         
-        self.decks = snapshot.documents.compactMap { document in
-            let deckData = document.data()
-            let id = deckData["id"] as? String ?? ""
-            let title = deckData["title"] as? String ?? ""
-            let imageURL = deckData["imageURL"] as? String ?? ""
-            
-            return Deck(id: id, title: title, imageURL: imageURL)
+        DispatchQueue.main.async {
+            self.decks = snapshot.documents.compactMap { document in
+                let deckData = document.data()
+                let id = deckData["id"] as? String ?? ""
+                let title = deckData["title"] as? String ?? ""
+                let imageURL = deckData["imageURL"] as? String ?? ""
+                
+                return Deck(id: id, title: title, imageURL: imageURL)
+            }
         }
         
     }
