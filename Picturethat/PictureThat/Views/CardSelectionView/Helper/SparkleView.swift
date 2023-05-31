@@ -78,7 +78,6 @@ struct SparkleView: View {
     
     var body: some View {
         ZStack {
-            Color.black // 검정 배경
             
             ForEach(sparkles) { sparkle in
                 Image(systemName: "sparkle")
@@ -88,6 +87,7 @@ struct SparkleView: View {
                     .frame(width: sparkle.size, height: sparkle.size)
                     .opacity(sparkle.opacity)
                     .position(sparkle.position)
+                
             }
         }
         .onAppear {

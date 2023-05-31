@@ -13,10 +13,8 @@ struct HomeView: View {
             
             ZStack{
                 
-                Image("img_BackGroundImage")
-                    .resizable()
+                BackGroundView(darkLayerCount: 1)
                     .ignoresSafeArea()
-                
                 
                 VStack(spacing: 0) {
                     
@@ -98,6 +96,7 @@ struct HomeView: View {
             
         }
         .navigationViewStyle(.automatic)
+        .preferredColorScheme(.light)
 
     }
 }

@@ -12,12 +12,15 @@ struct CardSelectionView: View {
     var body: some View {
         
         ZStack{
-            SparkleView()
+            
+            BackGroundView(darkLayerCount: 4)
                 .ignoresSafeArea()
+            
+            SparkleView()
             
             VStack{
                 Capsule()
-                    .fill(Color.secondary)
+                    .fill(Color.white)
                     .frame(width: 40, height: 5)
                     .opacity(0.5)
                     .padding(10)
@@ -27,6 +30,7 @@ struct CardSelectionView: View {
             CardListView(deck: self.deck)
             
         }
+        
     }
 }
 
