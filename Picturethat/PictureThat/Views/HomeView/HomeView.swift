@@ -13,10 +13,8 @@ struct HomeView: View {
             
             ZStack{
                 
-                Image("img_BackGroundImage")
-                    .resizable()
-                    .ignoresSafeArea()
-                
+                BackGroundView(darkLayerCount: 1)
+                    .edgesIgnoringSafeArea(.bottom)
                 
                 VStack(spacing: 0) {
                     
