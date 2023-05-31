@@ -11,6 +11,7 @@ import FirebaseFirestore
 class DeckViewModel: ObservableObject {
     @Published var decks: [Deck] = []
     @Published var loadingDecks: Set<String> = []
+    @Published var fetchCompleted: Bool = false
     
     private let firestore = Firestore.firestore()
     private let decksCollection = "decks"
@@ -31,6 +32,8 @@ class DeckViewModel: ObservableObject {
                 
                 return Deck(id: id, title: title, imageURL: imageURL)
             }
+            
+            self.fetchCompleted = true
         }
         
     }
