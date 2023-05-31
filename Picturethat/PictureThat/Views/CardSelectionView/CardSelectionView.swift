@@ -20,7 +20,7 @@ struct CardSelectionView: View {
             
             VStack{
                 Capsule()
-                    .fill(Color.secondary)
+                    .fill(Color.white)
                     .frame(width: 40, height: 5)
                     .opacity(0.5)
                     .padding(10)
