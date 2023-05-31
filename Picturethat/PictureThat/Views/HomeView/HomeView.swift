@@ -14,7 +14,7 @@ struct HomeView: View {
             ZStack{
                 
                 BackGroundView(darkLayerCount: 1)
-                    .edgesIgnoringSafeArea(.bottom)
+                    .ignoresSafeArea()
                 
                 VStack(spacing: 0) {
                     
@@ -96,6 +96,7 @@ struct HomeView: View {
             
         }
         .navigationViewStyle(.automatic)
+        .preferredColorScheme(.light)
 
     }
 }
