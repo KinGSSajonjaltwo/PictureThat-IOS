@@ -17,9 +17,8 @@ struct DeckSelectionView: View {
     var body: some View {
         
         ZStack{
-            Image("img_BackGroundImage")
-                .resizable()
-                .ignoresSafeArea()
+            BackGroundView(darkLayerCount: 2)
+                .edgesIgnoringSafeArea(.bottom)
             
             //MARK: NavigationBar
             VStack{
