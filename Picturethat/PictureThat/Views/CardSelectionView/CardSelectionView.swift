@@ -12,6 +12,9 @@ struct CardSelectionView: View {
     var body: some View {
         
         ZStack{
+            
+            BackGroundView(darkLayerCount: 4)
+            
             SparkleView()
                 .ignoresSafeArea()
             
