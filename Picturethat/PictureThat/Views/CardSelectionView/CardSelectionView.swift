@@ -14,9 +14,9 @@ struct CardSelectionView: View {
         ZStack{
             
             BackGroundView(darkLayerCount: 4)
+                .ignoresSafeArea()
             
             SparkleView()
-                .ignoresSafeArea()
             
             VStack{
                 Capsule()
@@ -30,6 +30,7 @@ struct CardSelectionView: View {
             CardListView(deck: self.deck)
             
         }
+        
     }
 }
 
