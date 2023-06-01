@@ -24,6 +24,7 @@
 		074EBE002A23970D0031C18C /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074EBDFF2A23970D0031C18C /* ImageLoader.swift */; };
 		074EBE042A258DF80031C18C /* SparkleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074EBE032A258DF80031C18C /* SparkleView.swift */; };
 		074EBE062A271CB20031C18C /* BackGroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074EBE052A271CB20031C18C /* BackGroundView.swift */; };
+		074EBE082A27650C0031C18C /* FourCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074EBE072A27650C0031C18C /* FourCardView.swift */; };
 		078831A42A1F43240089B4A1 /* CardsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078831A32A1F43240089B4A1 /* CardsViewModel.swift */; };
 		078831A82A1F7FD80089B4A1 /* CardSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078831A72A1F7FD80089B4A1 /* CardSelectionView.swift */; };
 		078B618C29DC522D00BA191C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 078B618B29DC522D00BA191C /* GoogleService-Info.plist */; };
@@ -52,6 +53,7 @@
 		074EBDFF2A23970D0031C18C /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		074EBE032A258DF80031C18C /* SparkleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SparkleView.swift; sourceTree = "<group>"; };
 		074EBE052A271CB20031C18C /* BackGroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackGroundView.swift; sourceTree = "<group>"; };
+		074EBE072A27650C0031C18C /* FourCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourCardView.swift; sourceTree = "<group>"; };
 		078831A32A1F43240089B4A1 /* CardsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsViewModel.swift; sourceTree = "<group>"; };
 		078831A72A1F7FD80089B4A1 /* CardSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSelectionView.swift; sourceTree = "<group>"; };
 		078B618B29DC522D00BA191C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 			children = (
 				07459D372A1E480000106AC8 /* CardListView.swift */,
 				07459D3F2A1E492700106AC8 /* CardView.swift */,
+				074EBE072A27650C0031C18C /* FourCardView.swift */,
 				074EBE032A258DF80031C18C /* SparkleView.swift */,
 			);
 			path = Helper;
@@ -336,6 +339,7 @@
 				072BCE172A1C4958004B3799 /* DeckViewModel.swift in Sources */,
 				078831A82A1F7FD80089B4A1 /* CardSelectionView.swift in Sources */,
 				07459D382A1E480000106AC8 /* CardListView.swift in Sources */,
+				074EBE082A27650C0031C18C /* FourCardView.swift in Sources */,
 				074C68262A065B9F0039845E /* NavBarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

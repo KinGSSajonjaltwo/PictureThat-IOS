@@ -15,5 +15,7 @@ extension Font {
     static let cardSourceFont = Font.custom("AppleSDGothicNeo-Light", size: 15)
     
     static let cardTitleFont = Font.custom("AppleSDGothicNeo-Bold", size: 24)
+    
+    static let simpleCardSourceFont = Font.custom("AppleSDGothicNeo-Light", size: 10)
 
 }
