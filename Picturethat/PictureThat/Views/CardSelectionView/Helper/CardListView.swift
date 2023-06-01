@@ -32,7 +32,8 @@ struct CardListView: View {
         }
         .frame(height: 600)
         .task{
-            cardsViewModel.fetchCards(deckID: deck.id)
+            await cardsViewModel.fetchCards(deckID: deck.id)
+            cardsViewModel.loadImages()
         }
         
     }
