@@ -17,8 +17,7 @@ struct CardListView: View {
         GeometryReader { geo in
             TabView {
                 
-                DeckView(deck: deck)
-                    .frame(width: 300, height: 400)
+                FourCardView(deck: self.deck, cardsViewModel: cardsViewModel)
                 
                 ForEach(cardsViewModel.cards) { card in
                     
