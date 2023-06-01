@@ -32,6 +32,7 @@
 		07A316412A04D00C00168768 /* DeckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A316402A04D00C00168768 /* DeckView.swift */; };
 		07A316432A04DD6200168768 /* DeckListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A316422A04DD6200168768 /* DeckListView.swift */; };
 		07A316462A04E88A00168768 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A316452A04E88A00168768 /* Deck.swift */; };
+		07CE37AD2A28C91800BCD843 /* UINavigationController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CE37AC2A28C91800BCD843 /* UINavigationController+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		07A316402A04D00C00168768 /* DeckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckView.swift; sourceTree = "<group>"; };
 		07A316422A04DD6200168768 /* DeckListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckListView.swift; sourceTree = "<group>"; };
 		07A316452A04E88A00168768 /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
+		07CE37AC2A28C91800BCD843 /* UINavigationController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 				070B8DC029D8631700135BEA /* Font+.swift */,
 				070B8DD729D86E0400135BEA /* Color+.swift */,
 				074EBDFF2A23970D0031C18C /* ImageLoader.swift */,
+				07CE37AC2A28C91800BCD843 /* UINavigationController+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 				07A316412A04D00C00168768 /* DeckView.swift in Sources */,
 				070B8DAC29D8455200135BEA /* PicturethatApp.swift in Sources */,
 				074EBE002A23970D0031C18C /* ImageLoader.swift in Sources */,
+				07CE37AD2A28C91800BCD843 /* UINavigationController+.swift in Sources */,
 				0747F1262A00227C00DFEE4F /* DeckSelectionView.swift in Sources */,
 				072BCE172A1C4958004B3799 /* DeckViewModel.swift in Sources */,
 				078831A82A1F7FD80089B4A1 /* CardSelectionView.swift in Sources */,
