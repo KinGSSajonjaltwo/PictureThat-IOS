@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CardSelectionView: View {
+    
     var deck: Deck
     var body: some View {
         
@@ -37,5 +38,6 @@ struct CardSelectionView: View {
 struct CardSelectionView_Previews: PreviewProvider {
     static var previews: some View {
         CardSelectionView(deck: Deck.sampleDeck1)
+            .environmentObject(SavedCardsData())
     }
 }

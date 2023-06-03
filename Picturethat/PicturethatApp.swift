@@ -23,9 +23,12 @@ struct PicturethatApp: App {
     
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
+    @StateObject private var savedCardsData = SavedCardsData()
+    
     var body: some Scene {
         WindowGroup {
             HomeView()
+                .environmentObject(savedCardsData)
         }
     }
 }
