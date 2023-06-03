@@ -14,8 +14,6 @@ struct CardSelectionView: View {
     @State private var showingShareSheet = false
     @State private var showingAlert = false
     
-    @State private var imageForShare: UIImage? = nil
-    
     var body: some View {
         
         ZStack{
@@ -38,20 +36,12 @@ struct CardSelectionView: View {
                 CardListView(deck: self.deck, cardsViewModel: self.cardsViewModel)
                 Button {
                     
-                    if let image = imageForShare {
+                    if cardsViewModel.fetchCompleted{
                         showingShareSheet = true
-                    } else {
-                        if cardsViewModel.fetchCompleted {
-                            if let image = createFourCutImage() {
-                                imageForShare = image
-                                showingShareSheet = true
-                            } else {
-                                showingAlert = true
-                            }
-                        } else {
-                            showingAlert = true
-                        }
+                    }else{
+                        showingAlert = true
                     }
+
                     
                 } label: {
                     
