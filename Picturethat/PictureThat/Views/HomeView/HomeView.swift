@@ -45,7 +45,7 @@ struct HomeView: View {
                     }
                     .padding(.vertical, 50)
                                   
-                    
+                    Spacer()
                     //버튼
                     NavigationLink(
                         destination: DeckSelectionView(),
@@ -68,37 +68,8 @@ struct HomeView: View {
                             }
                         })
                     .padding()
-                    
-                    
-                    Button {
-                        showAlert = true
-                    } label: {
-                        ZStack {
-                            
-                            RoundedRectangle(cornerRadius: 30)
-                                .fill(Color.buttonBorderColor)
-                                .frame(width: 256, height: 55)
-                                .shadow(color: Color.buttonShadowColor, radius: 2, x: 0, y: 2)
-                            
-                            RoundedRectangle(cornerRadius: 30)
-                                .fill(Color.white)
-                                .frame(width: 252, height: 51)
 
-                            Text("저장한 카드 보기")
-                                .font(.deckButtonFont)
-                                .foregroundColor(.buttonTextColor)
-                            
-                        }
-                        .opacity(0.5)
-                    }
-                    .alert(isPresented: $showAlert) {
-                        Alert(
-                            title: Text("준비 중인 기능"),
-                            message: Text("업데이트 예정입니다."),
-                            dismissButton: .default(Text("확인"))
-                        )
-                    }
-
+                    Spacer()
                     Spacer()
                     
                 }
