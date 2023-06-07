@@ -25,7 +25,12 @@ class DeckViewModel: ObservableObject {
         
         DispatchQueue.main.async {
             self.decks = snapshot.documents.compactMap { document in
+                
                 let deckData = document.data()
+                let isOpen = deckData["isOpen"] as? Bool ?? false
+                guard isOpen else {
+                    return nil // Skip this document if isopen is false
+                }
                 let id = deckData["id"] as? String ?? ""
                 let title = deckData["title"] as? String ?? ""
                 let imageURL = deckData["imageURL"] as? String ?? ""
