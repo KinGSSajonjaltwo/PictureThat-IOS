@@ -78,7 +78,8 @@ struct CardSelectionView: View {
                 .sheet(isPresented: $showingShareSheet) {
                     
                     if let image = createFourCutImage() {
-                        ShareSheet(activityItems: [image])
+                        ShareSheet(title: "\(deck.title) 카드팩", image: image)
+                            .edgesIgnoringSafeArea(.bottom)
                     }
                     
                 }
@@ -124,17 +125,5 @@ struct CardSelectionView: View {
 struct CardSelectionView_Previews: PreviewProvider {
     static var previews: some View {
         CardSelectionView(deck: Deck.sampleDeck1)
-    }
-}
-
-struct ShareSheet: UIViewControllerRepresentable {
-    let activityItems: [Any]
-    
-    func makeUIViewController(context: UIViewControllerRepresentableContext<ShareSheet>) -> UIActivityViewController {
-        return UIActivityViewController(activityItems: activityItems, applicationActivities: nil)
-    }
-    
-    func updateUIViewController(_ uiViewController: UIActivityViewController, context: UIViewControllerRepresentableContext<ShareSheet>) {
-        // No need to update the view controller
     }
 }
