@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct HomeView: View {
-    @State private var showAlert = false
     
     var body: some View {
         NavigationView {
@@ -43,7 +42,7 @@ struct HomeView: View {
                         }
                         
                     }
-                    .padding(.vertical, 50)
+                    .padding(.vertical, 40)
                                   
                     Spacer()
                     //버튼
@@ -67,7 +66,28 @@ struct HomeView: View {
                                 
                             }
                         })
-                    .padding()
+                    .padding(.bottom, 30)
+                    
+                    NavigationLink(
+                        destination: TagGeneratorView(),
+                        label: {
+                            ZStack {
+                                
+                                RoundedRectangle(cornerRadius: 30)
+                                    .fill(Color.buttonBorderColor)
+                                    .frame(width: 256, height: 55)
+                                    .shadow(color: Color.buttonShadowColor, radius: 2, x: 0, y: 2)
+                                
+                                RoundedRectangle(cornerRadius: 30)
+                                    .fill(Color.white)
+                                    .frame(width: 252, height: 51)
+
+                                Text("랜덤 포즈 태그 생성하기")
+                                    .font(.deckButtonFont)
+                                    .foregroundColor(.buttonTextColor)
+                                
+                            }
+                        })
 
                     Spacer()
                     Spacer()

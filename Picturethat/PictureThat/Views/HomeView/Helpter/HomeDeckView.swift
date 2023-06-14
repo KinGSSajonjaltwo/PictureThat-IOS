@@ -49,7 +49,7 @@ struct HomeDeckView_Previews: PreviewProvider {
 }
 
 extension HomeDeckView{
-    static var Sample1: HomeDeckView = HomeDeckView(imageName: "img_heartDeckThumbnail")
-    static var Sample2: HomeDeckView = HomeDeckView(imageName: "img_downloadThumbnail")
+    static var Sample1: HomeDeckView = HomeDeckView(imageName: "homeThumbNail2")
+    static var Sample2: HomeDeckView = HomeDeckView(imageName: "homeThumbNail1")
 }
 
