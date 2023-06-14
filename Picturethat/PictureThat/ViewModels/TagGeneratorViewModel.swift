@@ -7,6 +7,7 @@
 
 import SwiftUI
 import FirebaseFirestore
+import FirebaseAnalytics
 
 class TagGeneratorViewModel{
     
@@ -16,7 +17,7 @@ class TagGeneratorViewModel{
     private let poseTagCollection = "posetags"
     
     func fetchDecks() async{
-        
+        Analytics.logEvent("TagGeneratorView_Appeared", parameters: [:])
         do {
             let snapshot = try await firestore.collection(poseTagCollection).getDocuments()
             let tags = snapshot.documents.compactMap { $0["name"] as? String }

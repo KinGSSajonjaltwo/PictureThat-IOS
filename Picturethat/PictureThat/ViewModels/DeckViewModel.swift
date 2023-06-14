@@ -7,6 +7,7 @@
 
 import SwiftUI
 import FirebaseFirestore
+import FirebaseAnalytics
 
 class DeckViewModel: ObservableObject {
     @Published var decks: [Deck] = []
@@ -17,7 +18,7 @@ class DeckViewModel: ObservableObject {
     private let decksCollection = "decks"
     
     func fetchDecks() async{
-
+        Analytics.logEvent("DeckSelectionView_Appeared", parameters: [:])
         guard let snapshot = try? await firestore.collection(decksCollection).order(by: "id").getDocuments() else {
             print("Error fetching decks")
             return

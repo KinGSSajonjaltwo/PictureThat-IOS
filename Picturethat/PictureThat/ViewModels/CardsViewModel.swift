@@ -7,6 +7,7 @@
 
 import SwiftUI
 import FirebaseFirestore
+import FirebaseAnalytics
 
 class CardsViewModel: ObservableObject {
     @Published var cards: [Card] = []
@@ -18,6 +19,7 @@ class CardsViewModel: ObservableObject {
     
     func fetchCards(deckID: String) async{
         
+        Analytics.logEvent("CardSelectionView_Appeared", parameters: ["deckID" : "\(deckID)"])
         guard let snapshot = try? await firestore.collection(cardsCollection).whereField("deckID", isEqualTo: deckID).order(by: "id").getDocuments() else {
             print("Error fetching cards")
             return
