@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FirebaseAnalytics
 
 struct HomeView: View {
     
@@ -66,6 +67,9 @@ struct HomeView: View {
                                 
                             }
                         })
+                    .onTapGesture {
+                        Analytics.logEvent("DeckSelectionView_Clicked", parameters: [:])
+                    }
                     .padding(.bottom, 30)
                     
                     NavigationLink(
@@ -88,6 +92,9 @@ struct HomeView: View {
                                 
                             }
                         })
+                    .onTapGesture {
+                        Analytics.logEvent("TagGeneratorView_Clicked", parameters: [:])
+                    }
 
                     Spacer()
                     Spacer()
