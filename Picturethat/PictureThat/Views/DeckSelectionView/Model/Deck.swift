@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Deck: Identifiable{
+struct Deck: Identifiable, Equatable{
     
     var id: String
     var title: String
