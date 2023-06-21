@@ -12,6 +12,7 @@ import FirebaseAnalytics
 class TagGeneratorViewModel{
     
     var tags: [String] = []
+    var extractedTagIndices: Set<Int> = []
     
     private let firestore = Firestore.firestore()
     private let poseTagCollection = "posetags"
@@ -34,7 +35,17 @@ class TagGeneratorViewModel{
         guard !tags.isEmpty else {
             return nil
         }
-        let randomIndex = Int.random(in: 0..<tags.count)
+        
+        let availableIndices = Array(0..<tags.count).filter { !extractedTagIndices.contains($0) }
+        
+        if availableIndices.isEmpty {
+            extractedTagIndices = []
+            return getRandomTag()
+        }
+        
+        let randomIndex = availableIndices.randomElement()!
+        extractedTagIndices.insert(randomIndex)
+        
         return tags[randomIndex]
     }
     
